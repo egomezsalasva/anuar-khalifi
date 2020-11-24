@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import ThreePiece01 from '../imgs/threePiece01.png'
 import ThreePiece02 from '../imgs/threePiece02.png'
 import homeImg01 from '../imgs/home01.png'
-import Preloader from '../components/Preloader'
+// import Preloader from '../components/Preloader'
 
 const anuarWhite = "#FCFBFA"
 const anuarBlue = "#001F80"
@@ -182,21 +182,9 @@ const Menu = styled.div`
   }
 `
 
-const Desoriente = () => {
+const Desoriente = ({themeColorToggleHandlerProp}) => {
 
-  // Color Themeing
-    const [theme, setTheme] = useState({ mode: "dark" })
-    const [themeColorToggle, setThemeColorToggle] = useState(false)
-    const themeColorToggleHandler = () => {
-      if(themeColorToggle === false){
-        setTheme({ mode: "light"})
-      } else {
-        setTheme({ mode: "dark"})
-      }
-      setThemeColorToggle(!themeColorToggle)
-    }
-  // 
-
+  
   // Menu Animation
 
     const [menuActive, setMenuActive] = useState(false)
@@ -238,7 +226,7 @@ const Desoriente = () => {
   return (
     <Container>
 
-        <Preloader />
+        {/* <Preloader /> */}
 
         <LeftBar ref={el => {leftBarRef = el}}>
         <div className="currentNavTitle">
@@ -274,7 +262,7 @@ const Desoriente = () => {
                 
                 </div>
 
-                <div className="colorThemeDot" onClick={themeColorToggleHandler}/>
+                <div className="colorThemeDot" onClick={themeColorToggleHandlerProp}/>
 
             </div>
             <div className="rightHeader">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {createGlobalStyle, ThemeProvider} from 'styled-components'
 import ForeverIsACurrentEvent from './pages/ForeverIsACurrentEvent'
 import DustRosesAndCockroaches from './pages/DustRosesAndCockroaches'
@@ -35,6 +35,15 @@ function App() {
 
   // Color Themeing
     const [theme, setTheme] = useState({ mode: "dark" })
+    const [themeColorToggle, setThemeColorToggle] = useState(false)
+    const themeColorToggleHandler = () => {
+      if(themeColorToggle === false){
+        setTheme({ mode: "light"})
+      } else {
+        setTheme({ mode: "dark"})
+      }
+      setThemeColorToggle(!themeColorToggle)
+    }
   // 
 
   return (
@@ -45,19 +54,19 @@ function App() {
 
           <Switch>
             <Route path="/bio">
-              <Contact />
+              <Contact themeColorToggleHandlerProp={themeColorToggleHandler} />
             </Route>
             <Route path="/bio">
-              <Bio />
+              <Bio  themeColorToggleHandlerProp={themeColorToggleHandler} />
             </Route>
             <Route path="/desoriente">
-              <Desoriente />
+              <Desoriente themeColorToggleHandlerProp={themeColorToggleHandler} />
             </Route>
             <Route path="/dust-roses-and-cockroaches">
-              <DustRosesAndCockroaches />
+              <DustRosesAndCockroaches themeColorToggleHandlerProp={themeColorToggleHandler} />
             </Route>
             <Route path="/forever-is-a-current-event">
-              <ForeverIsACurrentEvent />
+              <ForeverIsACurrentEvent themeColorToggleHandlerProp={themeColorToggleHandler} />
             </Route>
             <Route path="/">
               <UnderConstruction />
