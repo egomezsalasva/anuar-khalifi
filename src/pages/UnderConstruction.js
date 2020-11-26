@@ -1,14 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-
-const anuarWhite = "#FCFBFA"
+import { colors, fonts } from '../project-styles/projectStyles'
 
 
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
 `
-// Test Deploy
 
 const UnderContructionContentWrapper = styled.div`
     position: absolute;
@@ -17,17 +15,17 @@ const UnderContructionContentWrapper = styled.div`
     transform: translate(-50%, -50%);
 
     .logo{
-        font-family: 'RightGrotesk-CompactBlack';
+        font-family: ${fonts.logo};
         font-size: 25px;
         line-height: 25px;
-        color: ${anuarWhite};
+        color: ${colors.white};
         letter-spacing: 0.08px;
         text-align: center;
         margin-bottom: 20px;
     }
     .text{
-        color: ${anuarWhite};
-        font-family: 'PeakTRIAL-Regular';
+        color: ${colors.white};
+        font-family: ${fonts.regular};
         font-size: 17px;
         text-align: center;
         margin-bottom: 5px;

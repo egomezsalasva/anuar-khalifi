@@ -7,10 +7,7 @@ import Desoriente from './pages/Desoriente'
 import Bio from './pages/Bio'
 import Contact from './pages/Contact'
 import UnderConstruction from './pages/UnderConstruction'
-
-const anuarWhite = "#FCFBFA"
-const anuarBlue = "#001F80"
-// const anuarBlack = "#030303"
+import { colors, fonts } from './project-styles/projectStyles'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -42,13 +39,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'RightGrotesk-CompactBlack';
-    src: url('./fonts/RightGrotesk-CompactBlack.eot');
-    src: url('./fonts/RightGrotesk-CompactBlack.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/RightGrotesk-CompactBlack.woff2') format('woff2'),
-        url('./fonts/RightGrotesk-CompactBlack.woff') format('woff'),
-        url('./fonts/RightGrotesk-CompactBlack.ttf') format('truetype'),
-        url('./fonts/RightGrotesk-CompactBlack.svg#RightGrotesk-CompactBlack') format('svg');
+    font-family: 'RightGrotesk';
+    src: url('./fonts/rightgrotesk-compactblack-webfont.eot');
+    src: url('./fonts/rightgrotesk-compactblack-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/rightgrotesk-compactblack-webfont.woff2') format('woff2'),
+        url('./fonts/rightgrotesk-compactblack-webfont.woff') format('woff'),
+        url('./fonts/rightgrotesk-compactblack-webfont.ttf') format('truetype'),
+        url('./fonts/rightgrotesk-compactblack-webfont.svg#RightGrotesk-CompactBlack') format('svg');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -62,12 +59,12 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: 'PeakTRIAL-Regular', 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: ${fonts.regular}, 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: ${ props => props.theme.mode === 'dark' ? anuarBlue :  anuarWhite };
+    background: ${ props => props.theme.mode === 'dark' ? colors.blue :  colors.white };
   }
 `
 
