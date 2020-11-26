@@ -17,7 +17,7 @@
         background: ${colors.white};
         top: 0;
         left: -160px;
-        left: 0;
+        /* left: 0; */
         z-index: 20;
         display: flex;
         justify-content: center;
@@ -54,7 +54,7 @@
 
         .menuList{
             .menuOption{
-                opacity: 1;
+                opacity: 0;
                 /* width: 120px; */
                 transform: translateX(-20px);
                 font-family: ${fonts.bold};
@@ -77,6 +77,7 @@
     
         return (
             <MenuContainer>
+
                 <div className="currentNavTitleContainer">
                     <div className="currentNavTitle">
                         <div className="overflowNavTitle">
@@ -84,6 +85,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div className="menuList">
 
                     <Link to="/forever-is-a-current-event">
@@ -107,6 +109,7 @@
                     </Link>
 
                 </div>
+
             </MenuContainer>
         )
     }
