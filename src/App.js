@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {createGlobalStyle, ThemeProvider} from 'styled-components'
+import {createGlobalStyle, ThemeProvider } from 'styled-components'
 import ForeverIsACurrentEvent from './pages/ForeverIsACurrentEvent'
 import DustRosesAndCockroaches from './pages/DustRosesAndCockroaches'
 import Desoriente from './pages/Desoriente'
@@ -8,6 +8,8 @@ import Bio from './pages/Bio'
 import Contact from './pages/Contact'
 import UnderConstruction from './pages/UnderConstruction'
 import { colors } from './project-styles/projectStyles'
+import { ThemeContext } from './contexts/themeContext'
+
 
 
 const GlobalStyle = createGlobalStyle`
@@ -67,49 +69,36 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
 
-  // Color Themeing
-    const [theme, setTheme] = useState({ mode: "dark" })
-    const [themeColorToggle, setThemeColorToggle] = useState(false)
-    const themeColorToggleHandler = () => {
-      if(themeColorToggle === false){
-        setTheme({ mode: "light"})
-      } else {
-        setTheme({ mode: "dark"})
-      }
-      setThemeColorToggle(!themeColorToggle)
-    }
-  // 
+  const {contextTheme} = useContext(ThemeContext)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={contextTheme}>
       <Router>
 
-          <GlobalStyle />
+        <GlobalStyle />
 
-          <Switch>
-            <Route path="/bio">
-              <Contact themeColorToggleHandlerProp={themeColorToggleHandler} />
-            </Route>
-            <Route path="/bio">
-              <Bio  themeColorToggleHandlerProp={themeColorToggleHandler} />
-            </Route>
-            <Route path="/desoriente">
-              <Desoriente themeColorToggleHandlerProp={themeColorToggleHandler} />
-            </Route>
-            <Route path="/dust-roses-and-cockroaches">
-              <DustRosesAndCockroaches themeColorToggleHandlerProp={themeColorToggleHandler} />
-            </Route>
-            <Route path="/forever-is-a-current-event">
-              <ForeverIsACurrentEvent themeColorToggleHandlerProp={themeColorToggleHandler} />
-            </Route>
-            <Route path="/">
-              <UnderConstruction />
-            </Route>
-          </Switch>
-          
-
-  
-      </Router>
+        <Switch>
+          <Route path="/bio">
+            <Contact />
+          </Route>
+          <Route path="/bio">
+            <Bio />
+          </Route>
+          <Route path="/desoriente">
+            <Desoriente />
+          </Route>
+          <Route path="/dust-roses-and-cockroaches">
+            <DustRosesAndCockroaches />
+          </Route>
+          <Route path="/forever-is-a-current-event">
+            <ForeverIsACurrentEvent />
+          </Route>
+          <Route path="/">
+            <UnderConstruction />
+          </Route>
+        </Switch>
+      
+        </Router>  
     </ThemeProvider>
   )
 }
