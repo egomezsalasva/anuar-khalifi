@@ -7,7 +7,7 @@ import Desoriente from './pages/Desoriente'
 import Bio from './pages/Bio'
 import Contact from './pages/Contact'
 import UnderConstruction from './pages/UnderConstruction'
-import { colors, fonts } from './project-styles/projectStyles'
+import { colors } from './project-styles/projectStyles'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -22,7 +22,6 @@ const GlobalStyle = createGlobalStyle`
         url('./fonts/PeakTRIAL-Regular.svg#PeakTRIAL-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
   }
 
   @font-face {
@@ -35,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
         url('./fonts/PeakTRIAL-Bold.svg#PeakTRIAL-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
   }
 
   @font-face {
@@ -48,7 +46,6 @@ const GlobalStyle = createGlobalStyle`
         url('./fonts/rightgrotesk-compactblack-webfont.svg#RightGrotesk-CompactBlack') format('svg');
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
   }
 
   *{
@@ -59,9 +56,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: ${fonts.regular}, 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: 'PeakTRIAL-Regular', 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: ${ props => props.theme.mode === 'dark' ? colors.blue :  colors.white };
