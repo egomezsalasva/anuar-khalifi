@@ -15,7 +15,7 @@ const UnderContructionContentWrapper = styled.div`
     transform: translate(-50%, -50%);
 
     .logo{
-        font-family: 'RightGrotesk';
+        font-family: 'Right Grotesk Compact';
         font-size: 25px;
         line-height: 25px;
         color: ${colors.white};
