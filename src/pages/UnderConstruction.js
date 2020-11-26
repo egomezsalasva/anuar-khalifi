@@ -28,7 +28,7 @@ const UnderContructionContentWrapper = styled.div`
     .text{
         color: ${anuarWhite};
         font-family: 'PeakTRIAL-Regular';
-        font-size: 18px;
+        font-size: 17px;
         text-align: center;
         margin-bottom: 5px;
     }
