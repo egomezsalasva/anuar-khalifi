@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './fonts.css'
 import App from './App'
 import { ThemeContextProvider } from './contexts/themeContext';
 

@@ -84,7 +84,7 @@ const HeaderContainer = styled.div`
 
   .rightHeader{
     .logo{
-      font-family: 'RightGrotesk';
+      font-family: 'Right Grotesk Compact';
       font-size: 25px;
       line-height: 25px;
       color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
