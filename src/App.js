@@ -78,7 +78,7 @@ function App() {
         <GlobalStyle />
 
         <Switch>
-          <Route path="/bio">
+          <Route path="/contact">
             <Contact />
           </Route>
           <Route path="/bio">

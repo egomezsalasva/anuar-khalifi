@@ -2,32 +2,16 @@
   //-Modules
   import React from 'react'
   import styled from 'styled-components'
+  //-Components
+  import PageWrapper from '../components/PageWrapper'
   //-Assets
   import ThreePiece01 from '../imgs/threePiece01.png'
   import ThreePiece02 from '../imgs/threePiece02.png'
   import homeImg01 from '../imgs/home01.png'
-  //-Components
-  //import Preloader from '../components/Preloader'
-  import Header from '../components/Header'
-  import Menu from '../components/Menu'
-  //-Styles
-  import { colors } from '../project-styles/projectStyles'
 // 
 
 
 // STYLES
-  const Container = styled.div`
-    width: 100%;
-    min-height: 100vh;
-  `
-  const RightContent = styled.div`
-    position: absolute;
-    right: 0;
-    width: calc(100% - 180px);
-    min-height: 100vh;
-    background: ${ props => props.theme.mode === 'dark' ? colors.blue :  colors.white };
-
-  `
   const PieceContainer = styled.div`
     position: relative;
     width: 100%;
@@ -50,16 +34,9 @@
   const DustRosesAndCockroaches = () => {
 
     return (
-      <Container>
+      <PageWrapper navTitleProp="٢">
 
-        {/* <Preloader /> */}
-        <Menu />
-
-        <RightContent>
-          
-          <Header />
-
-          <PieceContainer>
+        <PieceContainer>
               <img src={homeImg01} alt="three"/>
           </PieceContainer>
 
@@ -71,9 +48,7 @@
               <img src={ThreePiece02} alt="three h"/>
           </PieceContainer>
 
-        </RightContent>
-
-      </Container>
+      </PageWrapper>
     )
   }
   export default DustRosesAndCockroaches
