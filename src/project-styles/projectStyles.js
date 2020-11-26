@@ -1,9 +1,9 @@
 
 
 const fonts = {
-    logo: 'RightGrotesk',
+    logo: 'Right Grotesk Compact',
     bold: 'PeakTRIAL-Bold',
-    regular: 'PeakTRIAL-Regular',
+    regular: 'Peak TRIAL',
 }
 
 const colors = {
