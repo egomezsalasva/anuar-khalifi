@@ -23,3 +23,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Peak TRIAL';
+    src: url('./fonts/PeakTRIAL-Bold.eot');
+    src: url('./fonts/PeakTRIAL-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/PeakTRIAL-Bold.woff2') format('woff2'),
+        url('./fonts/PeakTRIAL-Bold.woff') format('woff'),
+        url('./fonts/PeakTRIAL-Bold.ttf') format('truetype'),
+        url('./fonts/PeakTRIAL-Bold.svg#PeakTRIAL-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

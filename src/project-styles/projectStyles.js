@@ -2,8 +2,7 @@
 
 const fonts = {
     logo: 'Right Grotesk Compact',
-    bold: 'PeakTRIAL-Bold',
-    regular: 'Peak TRIAL',
+    text: 'Peak TRIAL',
 }
 
 const colors = {

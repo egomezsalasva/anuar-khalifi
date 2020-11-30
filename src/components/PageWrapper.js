@@ -5,7 +5,7 @@
   //-Components
   //import Preloader from '../components/Preloader'
   import Header from './Header'
-  import Menu from './Menu'
+  // import Menu from './Menu'
   //-Styles
   import { colors } from '../project-styles/projectStyles'
 // 
@@ -33,7 +33,7 @@
       <Container>
 
         {/* <Preloader /> */}
-        <Menu navTitleProp={navTitleProp} />
+        {/* <Menu navTitleProp={navTitleProp} /> */}
 
         <RightContent>    
           <Header />

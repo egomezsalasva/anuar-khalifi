@@ -25,7 +25,7 @@ const UnderContructionContentWrapper = styled.div`
     }
     .text{
         color: ${colors.white};
-        font-family: ${fonts.regular};
+        font-family: ${fonts.text};
         font-size: 17px;
         text-align: center;
         margin-bottom: 5px;

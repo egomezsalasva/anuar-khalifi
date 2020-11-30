@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from "react-router-dom"
 import './fonts.css'
 import App from './App'
 import { ThemeContextProvider } from './contexts/themeContext';
@@ -7,7 +8,9 @@ import { ThemeContextProvider } from './contexts/themeContext';
 ReactDOM.render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById('root')

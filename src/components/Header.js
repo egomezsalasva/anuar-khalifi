@@ -1,8 +1,7 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import styled from 'styled-components'
-// import gsap from 'gsap'
 import { colors } from '../project-styles/projectStyles'
-import { ThemeContext } from '../contexts/themeContext'
+
 
 
 const HeaderBg = styled.div`
@@ -50,11 +49,13 @@ const HeaderContainer = styled.div`
       width: 18px;
       height: 24px;
       cursor: pointer;
+ 
+
       .line{
         width: 2px;
         height: 100%;
         /* mix-blend-mode: difference; */
-        background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
+        background: ${ props => props.theme.mode === 'dark' ? "red" :  colors.blue };
       }
       .lineLeft{
         position: absolute;
@@ -77,7 +78,7 @@ const HeaderContainer = styled.div`
       height: 24px;
       border-radius: 50%;
       background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
-      border: 2px solid ${colors.blue};
+      border: 2px solid green;
       cursor: pointer;
     }
   }
@@ -96,8 +97,6 @@ const HeaderContainer = styled.div`
 
 
 const Header = () => {
-
-  const {themeColorToggleHandler} = useContext(ThemeContext)
   
   return (
     <>
@@ -108,13 +107,13 @@ const Header = () => {
 
                 <div className="leftHeader">
 
-                    <div className="hamburgerMenu">
+                    {/* <div className="hamburgerMenu">
                         <div className="line lineLeft" />
                         <div className="line lineCenter" />
                         <div className="line lineRight" /> 
-                    </div>
+                    </div> */}
 
-                    <div className="colorThemeDot" onClick={themeColorToggleHandler}/>
+                    {/* <div className="colorThemeDot" onClick={themeColorToggleHandler}/> */}
 
                 </div>
 
