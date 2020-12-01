@@ -4,7 +4,7 @@ import { colors, fonts, zIndexes } from '../project-styles/projectStyles'
 
 
 const Container = styled.div`
-  position: fixed;
+  position: absolute;
   width: 100%;
   min-height: 100vh;
   z-index: ${zIndexes.underConstruction};

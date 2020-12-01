@@ -177,9 +177,9 @@
         // 
     
         // Hover Hamburguer Menu
-            useEffect(() => {
-                hamburguerTl.to(menuBlockRef, {duration: 0.8, x: "-140px", ease: "Power2.easeInOut"})
-            }, [hamburguerTl]) 
+            // useEffect(() => {
+            //     hamburguerTl.to(menuBlockRef, {duration: 0.8, x: "-140px", ease: "Power2.easeInOut"})
+            // }, [hamburguerTl]) 
         //
 
 

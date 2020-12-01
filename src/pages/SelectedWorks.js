@@ -26,7 +26,7 @@
     return (
       <PageWrapper navTitleProp="٤" >
 
-        <CollectionPreloader numProp="٤" titleProp="Selected Works 2020" yearProp="2020" arabYearProp="١٤٤١" />
+        <CollectionPreloader numProp="٤" titleProp="Selected Works" yearProp="2020" arabYearProp="١٤٤١" />
 
         {piecesData.selectedWorks.map( pieceItem => {
           return(

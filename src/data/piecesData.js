@@ -17,19 +17,19 @@ const piecesData = {
         {
             img: homeImg01,
             name: "Fanaa",
-            techniques: "Acrylique sur toile",
+            techniques: "Acrylic on canvas",
             measurements: "99 / 70",
         },
         {
             img: ThreePiece01,
             name: "Donkey Or Horse",
-            techniques: "Acrylique sur toile",
+            techniques: "Acrylic on canvas",
             measurements: "197 / 192",
         },
         {
             img: ThreePiece02,
             name: "Trophy Room",
-            techniques: "Acrylique sur toile",
+            techniques: "Acrylic on canvas",
             measurements: "167 / 130",
         }, 
     ],

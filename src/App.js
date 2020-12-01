@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react'
 import { Switch, Route, useLocation } from "react-router-dom"
 import {createGlobalStyle, ThemeProvider } from 'styled-components'
 import Menu from './components/Menu'
+import SelectedWorks from './pages/SelectedWorks'
 import ForeverIsACurrentEvent from './pages/ForeverIsACurrentEvent'
 import DustRosesAndCockroaches from './pages/DustRosesAndCockroaches'
 import Desoriente from './pages/Desoriente'
@@ -64,7 +65,7 @@ function App() {
       
         <GlobalStyle />
 
-        <Menu navTitleProp={navTitle} />
+        {/* <Menu navTitleProp={navTitle} /> */}
 
         <Switch>
           <Route path="/contact">
@@ -83,7 +84,7 @@ function App() {
             <ForeverIsACurrentEvent />
           </Route>
           <Route path="/selected-works-2020">
-            <ForeverIsACurrentEvent />
+            <SelectedWorks />
           </Route>
           <Route path="/">
             <UnderConstruction />
