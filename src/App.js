@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { Switch, Route, useLocation } from "react-router-dom"
+import React, { useContext } from 'react'
+import { Switch, Route } from "react-router-dom"
 import {createGlobalStyle, ThemeProvider } from 'styled-components'
-import Menu from './components/Menu'
+// import Menu from './components/Menu'
 import SelectedWorks from './pages/SelectedWorks'
 import ForeverIsACurrentEvent from './pages/ForeverIsACurrentEvent'
 import DustRosesAndCockroaches from './pages/DustRosesAndCockroaches'
@@ -37,27 +37,27 @@ function App() {
 
   const {contextTheme} = useContext(ThemeContext)  
 
-  let location = useLocation()
+  // let location = useLocation()
 
-  let [navTitle, setNavTitle] = useState("٣")
+  // let [navTitle, setNavTitle] = useState("٣")
 
-  useEffect(() => {
-    if(location.pathname === "/selected-works-2020"){
-      setNavTitle("٤")
-    } else if (location.pathname === "/forever-is-a-current-event") {
-      setNavTitle("٣")
-    } else if (location.pathname === "/dust-roses-and-cockroaches") {
-      setNavTitle("٢")
-    } else if (location.pathname === "/desoriente") {
-      setNavTitle("١")
-    } else if (location.pathname === "/bio") {
-      setNavTitle("Bio")
-    } else if (location.pathname === "/contact") {
-      setNavTitle("Contact")
-    } else {
-      setNavTitle(null)
-    }
-  }, [location])
+  // useEffect(() => {
+  //   if(location.pathname === "/selected-works-2020"){
+  //     setNavTitle("٤")
+  //   } else if (location.pathname === "/forever-is-a-current-event") {
+  //     setNavTitle("٣")
+  //   } else if (location.pathname === "/dust-roses-and-cockroaches") {
+  //     setNavTitle("٢")
+  //   } else if (location.pathname === "/desoriente") {
+  //     setNavTitle("١")
+  //   } else if (location.pathname === "/bio") {
+  //     setNavTitle("Bio")
+  //   } else if (location.pathname === "/contact") {
+  //     setNavTitle("Contact")
+  //   } else {
+  //     setNavTitle(null)
+  //   }
+  // }, [location])
 
   return (
     <ThemeProvider theme={contextTheme}>
