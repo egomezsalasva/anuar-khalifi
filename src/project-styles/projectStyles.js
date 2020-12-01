@@ -19,6 +19,7 @@ const zIndexes = {
     menu: 30,
     menuButtons: 35,
     websitePreloader: 40,
+    underConstruction: 50,
 }
  
 export { fonts , colors, zIndexes }

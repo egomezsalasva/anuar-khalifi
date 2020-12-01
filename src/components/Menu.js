@@ -210,6 +210,10 @@
 
                     <div className="menuList" ref={el => menuListRef = el}>
 
+                        <Link to="/selected-works-2020" onClick={menuClickHandler}>
+                            <div className="menuOption">٤</div>
+                        </Link>
+
                         <Link to="/forever-is-a-current-event" onClick={menuClickHandler}>
                             <div className="menuOption">٣</div>
                         </Link>

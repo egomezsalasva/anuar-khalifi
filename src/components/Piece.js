@@ -61,29 +61,34 @@
 
         .nameOverflow{
           overflow: hidden;
-          margin-bottom: 4px;
+          margin-bottom: 5px;
 
           .name{
             transform: translateY(100%);
           }
         }
-        
-        .measurementsOverflow{
-          overflow: hidden;
-          margin-bottom: 4px;
-
-          .measurements{
-            transform: translateY(100%);
-          } 
-        }
 
         .techniquesOverflow{
           overflow: hidden;
+          margin-bottom: 6px;
 
           .techniques{
             transform: translateY(100%);
           }
         }
+        
+        .measurementsOverflow{
+          overflow: hidden; 
+
+          .measurements{
+            transform: translateY(100%);
+
+            span{
+              font-size: 11px;
+            }
+          } 
+        }
+
       }
     }
   `
@@ -108,11 +113,11 @@
                 <div className="nameOverflow">
                   <div className="name infoAnim">{nameProp}</div>
                 </div>
-                <div className="measurementsOverflow">
-                  <div className="measurements infoAnim">{measurementsProp}</div>
-                </div>
                 <div className="techniquesOverflow">
                   <div className="techniques infoAnim">{techniquesProp}</div>
+                </div>
+                <div className="measurementsOverflow">
+                  <div className="measurements infoAnim"><span>{measurementsProp}</span> cm</div>
                 </div>
               </div>
 

@@ -41,7 +41,9 @@ function App() {
   let [navTitle, setNavTitle] = useState("٣")
 
   useEffect(() => {
-    if(location.pathname === "/forever-is-a-current-event"){
+    if(location.pathname === "/selected-works-2020"){
+      setNavTitle("٤")
+    } else if (location.pathname === "/forever-is-a-current-event") {
       setNavTitle("٣")
     } else if (location.pathname === "/dust-roses-and-cockroaches") {
       setNavTitle("٢")
@@ -78,6 +80,9 @@ function App() {
             <DustRosesAndCockroaches />
           </Route>
           <Route path="/forever-is-a-current-event">
+            <ForeverIsACurrentEvent />
+          </Route>
+          <Route path="/selected-works-2020">
             <ForeverIsACurrentEvent />
           </Route>
           <Route path="/">

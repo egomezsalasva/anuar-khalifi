@@ -21,7 +21,6 @@
     align-items: center;
 
     .preloaderContent{
-        /* background: green; */
         transform: translateY(-38px);
         text-align: center;
         color: ${colors.white};
@@ -56,7 +55,7 @@
         const preloaderTl = gsap.timeline()
         let preloaderCollectionContainerRef = useRef()
         useEffect(() => {
-            preloaderTl.to(preloaderCollectionContainerRef, {duration: 1.2, yPercent: -100, ease: "Power2.easeInOut", delay: 0.8 }, "0")
+            preloaderTl.to(preloaderCollectionContainerRef, {duration: 1.2, yPercent: -100, ease: "Power2.easeInOut", delay: 1.8 }, "0")
         })  
     //
 

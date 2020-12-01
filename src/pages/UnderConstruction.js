@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, fonts } from '../project-styles/projectStyles'
+import { colors, fonts, zIndexes } from '../project-styles/projectStyles'
 
 
 const Container = styled.div`
+  position: fixed;
   width: 100%;
   min-height: 100vh;
+  z-index: ${zIndexes.underConstruction};
 `
 
 const UnderContructionContentWrapper = styled.div`
@@ -41,8 +43,7 @@ const UnderConstruction = () => {
             <div className="logo">ANUAR KHALIFI</div>
             <div className="text">Website Under Construction</div>
             <div className="text">Contact: anuarkhalifi@gmail.com</div>
-        </UnderContructionContentWrapper>
-        
+        </UnderContructionContentWrapper>    
     </Container>
   )
 }

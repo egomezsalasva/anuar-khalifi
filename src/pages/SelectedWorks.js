@@ -24,11 +24,11 @@
 
 
     return (
-      <PageWrapper navTitleProp="٣" >
+      <PageWrapper navTitleProp="٤" >
 
-        <CollectionPreloader numProp="٣" titleProp="Forever Is A Current Event" yearProp="2019" arabYearProp="١٤٤١" />
+        <CollectionPreloader numProp="٤" titleProp="Selected Works 2020" yearProp="2020" arabYearProp="١٤٤١" />
 
-        {piecesData.foreverIsACurrentEvent.map( pieceItem => {
+        {piecesData.selectedWorks.map( pieceItem => {
           return(
             <Piece
               key={pieceItem.name}

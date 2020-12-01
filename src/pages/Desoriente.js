@@ -27,7 +27,7 @@
 
         <CollectionPreloader numProp="١" titleProp="Desoriente" yearProp="< 2017" arabYearProp="١٤٤١" />
 
-        {piecesData.map( pieceItem => {
+        {piecesData.desoriente.map( pieceItem => {
           return(
             <Piece
               key={pieceItem.name}

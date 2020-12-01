@@ -25,9 +25,9 @@
     return (
       <PageWrapper navTitleProp="٢">
 
-        <CollectionPreloader numProp="٢" titleProp="Dust Roses And Cockroaches" yearProp="2018" arabYearProp="١٤٤١" />
+        <CollectionPreloader numProp="٢" titleProp="Dust Roses And Cockroaches" yearProp="2019" arabYearProp="١٤٤١" />
 
-        {piecesData.map( pieceItem => {
+        {piecesData.dustRosesAndCockroaches.map( pieceItem => {
           return(
             <Piece
               key={pieceItem.name}
