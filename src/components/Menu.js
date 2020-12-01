@@ -5,7 +5,7 @@
     import gsap from 'gsap'
     import { Link } from 'react-router-dom'
     //-Styles
-    import { colors, fonts } from '../project-styles/projectStyles'
+    import { colors, fonts, zIndexes } from '../project-styles/projectStyles'
     import { ThemeContext } from '../contexts/themeContext'
 // 
 
@@ -16,7 +16,7 @@
         width: 340px;
         height: 100vh;
         position: fixed;
-        z-index: 40;
+        z-index: ${zIndexes.menu};
 
         .hamburgerMenu{
             width: 18px;
@@ -25,7 +25,7 @@
             position: absolute;
             top: 38px;
             right: 92px;
-            z-index: 50;
+            z-index: ${zIndexes.menuButtons};
 
             .line{
                 width: 2px;
@@ -56,7 +56,7 @@
             background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
             border: ${ props => props.theme.mode === 'dark' ? "2px solid" + colors.blue :  "2px solid" + colors.white };
             cursor: pointer;
-            z-index: 50;
+            z-index: ${zIndexes.menuButtons};
         }
 
         .menuBlockContainer{
@@ -178,10 +178,9 @@
     
         // Hover Hamburguer Menu
             useEffect(() => {
-                hamburguerTl.to(menuBlockRef, {duration: 0.8, x: "-152px", ease: "Power2.easeInOut"})
-            }, [hamburguerTl, menuTl]) 
+                hamburguerTl.to(menuBlockRef, {duration: 0.8, x: "-140px", ease: "Power2.easeInOut"})
+            }, [hamburguerTl]) 
         //
-
 
 
         return (

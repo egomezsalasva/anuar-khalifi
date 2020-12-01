@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 import {TextPlugin} from "gsap/dist/TextPlugin"
+import { zIndexes } from '../project-styles/projectStyles'
 
 
 //STYLES
@@ -16,7 +17,7 @@ import {TextPlugin} from "gsap/dist/TextPlugin"
         width: 100vw;
         height: 100vh;
         background: ${anuarWhite};
-        z-index: 1000;
+        z-index: ${zIndexes.websitePreloader};
         .percentageContainer{
             /* font-family: 'Helvetica-Bold'; */
             /* font-family: 'RightGrotesk-CompactBlack'; */

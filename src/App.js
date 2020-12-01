@@ -10,6 +10,7 @@ import Contact from './pages/Contact'
 import UnderConstruction from './pages/UnderConstruction'
 import { colors, fonts } from './project-styles/projectStyles'
 import { ThemeContext } from './contexts/themeContext'
+import { PiecesContextProvider } from './contexts/piecesContext'
 
 
 
@@ -57,32 +58,34 @@ function App() {
 
   return (
     <ThemeProvider theme={contextTheme}>
+      <PiecesContextProvider>
       
-      <GlobalStyle />
+        <GlobalStyle />
 
-      <Menu navTitleProp={navTitle} />
+        <Menu navTitleProp={navTitle} />
 
-      <Switch>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/bio">
-          <Bio />
-        </Route>
-        <Route path="/desoriente">
-          <Desoriente />
-        </Route>
-        <Route path="/dust-roses-and-cockroaches">
-          <DustRosesAndCockroaches />
-        </Route>
-        <Route path="/forever-is-a-current-event">
-          <ForeverIsACurrentEvent />
-        </Route>
-        <Route path="/">
-          <UnderConstruction />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/bio">
+            <Bio />
+          </Route>
+          <Route path="/desoriente">
+            <Desoriente />
+          </Route>
+          <Route path="/dust-roses-and-cockroaches">
+            <DustRosesAndCockroaches />
+          </Route>
+          <Route path="/forever-is-a-current-event">
+            <ForeverIsACurrentEvent />
+          </Route>
+          <Route path="/">
+            <UnderConstruction />
+          </Route>
+        </Switch>
 
+      </PiecesContextProvider>
     </ThemeProvider>
   )
 }

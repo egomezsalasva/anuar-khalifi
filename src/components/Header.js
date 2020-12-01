@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../project-styles/projectStyles'
+import { colors, zIndexes } from '../project-styles/projectStyles'
 
 
 
@@ -14,7 +14,7 @@ const HeaderBg = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
-  z-index: 9;
+  z-index: ${zIndexes.header};
 `
 
 const HeaderContainer = styled.div`
@@ -27,7 +27,7 @@ const HeaderContainer = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
-  z-index: 20;
+  z-index: ${zIndexes.headerContent};
 
   .headerContent{
     width: 100%;

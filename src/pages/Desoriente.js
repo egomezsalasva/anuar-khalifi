@@ -1,52 +1,45 @@
 // IMPORTS
   //-Modules
-  import React from 'react'
-  import styled from 'styled-components'
+  import React, { useContext, useEffect } from 'react'
+  import gsap from 'gsap'
   //-Components
   import PageWrapper from '../components/PageWrapper'
-  //-Assets
-  import ThreePiece01 from '../imgs/threePiece01.png'
-  import ThreePiece02 from '../imgs/threePiece02.png'
-  import homeImg01 from '../imgs/home01.png'
+  import Piece from '../components/Piece'
+  import CollectionPreloader from '../components/CollectionPreloader'
+  //-Contexts
+  import { PiecesContext } from '../contexts/piecesContext'
 // 
-
-
-// STYLES
-  const PieceContainer = styled.div`
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 100px);
-    margin-top: 100px;
-
-    img{
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, calc(-53%));
-      height: 600px;
-      box-shadow: 1px 2px 15px 0 rgba(0,0,0,0.25);
-    }
-  `
-//
 
 
 // MAIN COMPONENT
   const Desoriente = () => {
 
+    const {piecesData} = useContext(PiecesContext)
+
+    const infoTl = gsap.timeline({paused: true})
+    
+    useEffect(() => {
+      infoTl.to(".infoAnim", {duration: 0.5, yPercent: -100, stagger: 0.125, ease: "Power1.easeInOut"})
+    })
+
     return (
       <PageWrapper navTitleProp="١" >
 
-        <PieceContainer>
-              <img src={homeImg01} alt="three"/>
-          </PieceContainer>
+        <CollectionPreloader numProp="١" titleProp="Desoriente" yearProp="< 2017" arabYearProp="١٤٤١" />
 
-          <PieceContainer>
-              <img src={ThreePiece01} alt="three"/>
-          </PieceContainer>
-
-          <PieceContainer>
-              <img src={ThreePiece02} alt="three h"/>
-          </PieceContainer>
+        {piecesData.map( pieceItem => {
+          return(
+            <Piece
+              key={pieceItem.name}
+              imageProp={pieceItem.img}
+              nameProp={pieceItem.name}
+              measurementsProp={pieceItem.measurements}
+              techniquesProp={pieceItem.techniques}
+              onMouseEnterProp={() => infoTl.play()}
+              onMouseLeaveProp={() => infoTl.reverse()}
+            /> 
+          )
+        })}
 
       </PageWrapper>
     )
