@@ -60,43 +60,6 @@ const HeaderContainer = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-
-    .hamburgerMenu{
-      width: 18px;
-      height: 24px;
-      cursor: pointer;
- 
-
-      .line{
-        width: 2px;
-        height: 100%;
-        /* mix-blend-mode: difference; */
-        background: ${ props => props.theme.mode === 'dark' ? "red" :  colors.blue };
-      }
-      .lineLeft{
-        position: absolute;
-        left: 0;
-      }
-      .lineCenter{
-        position: absolute;
-        left: 8px;
-      }
-      .lineRight{
-        position: absolute;
-        left: 16px;
-      }
-    }
-
-    .colorThemeDot{
-      position: absolute;
-      right: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
-      border: 2px solid green;
-      cursor: pointer;
-    }
   }
 
   .rightHeader{
@@ -122,14 +85,6 @@ const Header = () => {
             <div className="headerContent">
 
                 <div className="leftHeader">
-
-                    {/* <div className="hamburgerMenu">
-                        <div className="line lineLeft" />
-                        <div className="line lineCenter" />
-                        <div className="line lineRight" /> 
-                    </div> */}
-
-                    {/* <div className="colorThemeDot" onClick={themeColorToggleHandler}/> */}
 
                 </div>
 

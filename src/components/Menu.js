@@ -23,6 +23,10 @@
         @media (max-width: ${mediaQueries.tablet}) {
             left: 50px;
         }
+        @media (max-width: ${mediaQueries.tablet}) {
+            top: 28px;
+            left: 30px;
+        }
 
         .line{
             width: 2px;

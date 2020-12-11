@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 import {TextPlugin} from "gsap/dist/TextPlugin"
-import { zIndexes, mediaQueries, fonts } from '../project-styles/projectStyles'
+import { zIndexes, mediaQueries } from '../project-styles/projectStyles'
 
 
 //STYLES
@@ -20,8 +20,8 @@ import { zIndexes, mediaQueries, fonts } from '../project-styles/projectStyles'
         z-index: ${zIndexes.websitePreloader};
 
         .percentageContainer{
-            font-family: ${fonts.preloader};
-            font-weight: 800;
+            font-family: 'Klarheit Kurrent TRIAL';
+            font-weight: bold;
             font-size: 80px;
             color: ${anuarBlack};
             line-height: 100px;
