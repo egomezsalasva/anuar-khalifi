@@ -55,6 +55,7 @@
           margin-top: 3px;
           font-size: 9px;
           color: ${colors.white};
+          opacity: 0.5;
         }
       }
     }
