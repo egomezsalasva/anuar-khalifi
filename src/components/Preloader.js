@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 import {TextPlugin} from "gsap/dist/TextPlugin"
-import { zIndexes } from '../project-styles/projectStyles'
+import { zIndexes, mediaQueries } from '../project-styles/projectStyles'
 
 
 //STYLES
@@ -18,20 +18,28 @@ import { zIndexes } from '../project-styles/projectStyles'
         height: 100vh;
         background: ${anuarWhite};
         z-index: ${zIndexes.websitePreloader};
+
         .percentageContainer{
-            /* font-family: 'Helvetica-Bold'; */
-            /* font-family: 'RightGrotesk-CompactBlack'; */
             font-family: 'KlarheitKurrentTRIAL-Bold';
             font-weight: 800;
             font-size: 80px;
             color: ${anuarBlack};
             line-height: 100px;
+            @media (max-width: ${mediaQueries.mobile}) {
+              font-size: 50px;
+              line-height: 62.5px;
+            }
+
             .percentSign{
-            position: relative;
-            font-size: 50px;
-            line-height: 100px;
-            top: -11px;
-            left: 5px
+              position: relative;
+              font-size: 50px;
+              line-height: 100px;
+              top: -11px;
+              left: 5px;
+              @media (max-width: ${mediaQueries.mobile}) {
+                font-size: 32px;
+                line-height: 62.5px;
+              }
             }
         }
     `

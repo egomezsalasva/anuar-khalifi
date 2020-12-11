@@ -24,7 +24,8 @@ const zIndexes = {
 }
 
 const mediaQueries = {
-    tablet: "1230px"
+    tablet: "1230px",
+    mobile: "430px",
 }
  
 export { fonts , colors, zIndexes, mediaQueries }
