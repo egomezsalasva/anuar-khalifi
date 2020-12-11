@@ -103,6 +103,7 @@
     transform: translateX( calc((${widthInfoContainer}/2) - ${leftOffset})) translateY(${topOffset});
     @media (max-width: ${mediaQueries.mobile}) {
       max-width: 100vw;
+      object-fit: contain;
     }
   `
 //
