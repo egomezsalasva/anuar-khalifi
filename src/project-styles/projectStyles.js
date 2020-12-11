@@ -3,6 +3,7 @@
 const fonts = {
     logo: 'Right Grotesk Compact',
     text: 'Peak TRIAL',
+    preloader: 'Klarheit Kurrent TRIAL',
 }
 
 const colors = {

@@ -36,3 +36,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Klarheit Kurrent TRIAL';
+    src: url('./fonts/KlarheitKurrentTRIAL-Bold.eot');
+    src: url('./fonts/KlarheitKurrentTRIAL-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/KlarheitKurrentTRIAL-Bold.woff2') format('woff2'),
+        url('./fonts/KlarheitKurrentTRIAL-Bold.woff') format('woff'),
+        url('./fonts/KlarheitKurrentTRIAL-Bold.ttf') format('truetype'),
+        url('./fonts/KlarheitKurrentTRIAL-Bold.svg#KlarheitKurrentTRIAL-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

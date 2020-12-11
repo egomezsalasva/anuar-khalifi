@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import gsap from 'gsap'
 import {TextPlugin} from "gsap/dist/TextPlugin"
-import { zIndexes, mediaQueries } from '../project-styles/projectStyles'
+import { zIndexes, mediaQueries, fonts } from '../project-styles/projectStyles'
 
 
 //STYLES
@@ -20,7 +20,7 @@ import { zIndexes, mediaQueries } from '../project-styles/projectStyles'
         z-index: ${zIndexes.websitePreloader};
 
         .percentageContainer{
-            font-family: 'KlarheitKurrentTRIAL-Bold';
+            font-family: ${fonts.preloader};
             font-weight: 800;
             font-size: 80px;
             color: ${anuarBlack};
@@ -38,7 +38,7 @@ import { zIndexes, mediaQueries } from '../project-styles/projectStyles'
               left: 5px;
               @media (max-width: ${mediaQueries.mobile}) {
                 top: -7px;
-                left: 3px;
+                left: 2px;
                 font-size: 32px;
                 line-height: 62.5px;
               }
