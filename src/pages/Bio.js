@@ -92,10 +92,11 @@
         }
 
           .text{
-            /* font-size: 20px; */
             color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
             @media (max-width: ${mediaQueries.mobile}) {
+              text-align: center;
               font-size: 14px;
+              margin-bottom: 30px;
             }
           }
       }
