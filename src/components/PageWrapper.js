@@ -7,7 +7,7 @@
   import Header from './Header'
   // import Menu from './Menu'
   //-Styles
-  import { colors } from '../project-styles/projectStyles'
+  import { colors, mediaQueries } from '../project-styles/projectStyles'
 // 
 
 
@@ -22,6 +22,9 @@
     width: calc(100% - 180px);
     min-height: 100vh;
     background: ${ props => props.theme.mode === 'dark' ? colors.blue :  colors.white };
+    @media (max-width: ${mediaQueries.tablet}) {
+      width: 100%;
+    }
   `
 //
 

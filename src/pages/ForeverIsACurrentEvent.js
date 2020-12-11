@@ -1,11 +1,13 @@
 // IMPORTS
   //-Modules
-  import React, { useContext, useEffect } from 'react'
-  import gsap from 'gsap'
+  import React, { useContext } from 'react'
   //-Components
   import PageWrapper from '../components/PageWrapper'
-  import Piece from '../components/Piece'
   import CollectionPreloader from '../components/CollectionPreloader'
+  import Piece from '../components/Piece'
+  import TriptychPiece from '../components/TriptychPiece'
+  import InstallationSectionForeverIsACurrentEvent from '../components/InstallationSectionForeverIsACurrentEvent'
+  import NextPageButton from '../components/NextPageButton'
   //-Contexts
   import { PiecesContext } from '../contexts/piecesContext'
 // 
@@ -16,19 +18,12 @@
 
     const {piecesData} = useContext(PiecesContext)
 
-    const infoTl = gsap.timeline({paused: true})
-    
-    useEffect(() => {
-      infoTl.to(".infoAnim", {duration: 0.5, yPercent: -100, stagger: 0.125, ease: "Power1.easeInOut"})
-    })
-
-
     return (
-      <PageWrapper navTitleProp="٣" >
+      <PageWrapper navTitleProp="٢" >
 
-        <CollectionPreloader numProp="٣" titleProp="Forever Is A Current Event" yearProp="2019" arabYearProp="١٤٤١" />
+        <CollectionPreloader numProp="٢" titleProp="Forever Is A Current Event" yearProp="2019" arabYearProp="١٤٤١" />
 
-        {piecesData.foreverIsACurrentEvent.map( pieceItem => {
+        {piecesData.foreverIsACurrentEventPt1.map( pieceItem => {
           return(
             <Piece
               key={pieceItem.name}
@@ -36,11 +31,27 @@
               nameProp={pieceItem.name}
               measurementsProp={pieceItem.measurements}
               techniquesProp={pieceItem.techniques}
-              onMouseEnterProp={() => infoTl.play()}
-              onMouseLeaveProp={() => infoTl.reverse()}
             /> 
           )
         })}
+
+        <TriptychPiece />
+
+        {piecesData.foreverIsACurrentEventPt2.map( pieceItem => {
+          return(
+            <Piece
+              key={pieceItem.name}
+              imageProp={pieceItem.img}
+              nameProp={pieceItem.name}
+              measurementsProp={pieceItem.measurements}
+              techniquesProp={pieceItem.techniques}
+            /> 
+          )
+        })}
+
+        <InstallationSectionForeverIsACurrentEvent />
+
+        <NextPageButton buttonTextProp="١ Dust Roses And Cockroaches" linkProp="/dust-roses-and-cockroaches" />
 
       </PageWrapper>
     )

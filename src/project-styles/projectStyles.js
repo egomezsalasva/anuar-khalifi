@@ -9,6 +9,7 @@ const colors = {
     white: "#FCFBFA",
     blue: "#001F80",
     black: "#030303",
+    green: "#007345"
 }
 
 const zIndexes = {
@@ -21,5 +22,9 @@ const zIndexes = {
     websitePreloader: 40,
     underConstruction: 50,
 }
+
+const mediaQueries = {
+    tablet: "1230px"
+}
  
-export { fonts , colors, zIndexes }
+export { fonts , colors, zIndexes, mediaQueries }

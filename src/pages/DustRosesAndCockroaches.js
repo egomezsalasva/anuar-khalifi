@@ -1,11 +1,11 @@
 // IMPORTS
   //-Modules
-  import React, { useContext, useEffect } from 'react'
-  import gsap from 'gsap'
+  import React, { useContext } from 'react'
   //-Components
   import PageWrapper from '../components/PageWrapper'
   import Piece from '../components/Piece'
   import CollectionPreloader from '../components/CollectionPreloader'
+  // import NextPageButton from '../components/NextPageButton'
   //-Contexts
   import { PiecesContext } from '../contexts/piecesContext'
 // 
@@ -16,16 +16,10 @@
 
     const {piecesData} = useContext(PiecesContext)
 
-    const infoTl = gsap.timeline({paused: true})
-    
-    useEffect(() => {
-      infoTl.to(".infoAnim", {duration: 0.5, yPercent: -100, stagger: 0.125, ease: "Power1.easeInOut"})
-    })
-
     return (
-      <PageWrapper navTitleProp="٢">
+      <PageWrapper navTitleProp="١">
 
-        <CollectionPreloader numProp="٢" titleProp="Dust Roses And Cockroaches" yearProp="2019" arabYearProp="١٤٤١" />
+        <CollectionPreloader numProp="١" titleProp="Dust Roses And Cockroaches" yearProp="2018" arabYearProp="١٤٤٠" />
 
         {piecesData.dustRosesAndCockroaches.map( pieceItem => {
           return(
@@ -35,11 +29,11 @@
               nameProp={pieceItem.name}
               measurementsProp={pieceItem.measurements}
               techniquesProp={pieceItem.techniques}
-              onMouseEnterProp={() => infoTl.play()}
-              onMouseLeaveProp={() => infoTl.reverse()}
             /> 
           )
         })}
+
+        {/* <NextPageButton buttonTextProp="Contact" linkProp="/contact" /> */}
 
       </PageWrapper>
     )

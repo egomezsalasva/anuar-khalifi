@@ -4,7 +4,7 @@
   import styled from 'styled-components'
   import gsap from 'gsap'
   //-Styles
-  import { colors, fonts, zIndexes } from '../project-styles/projectStyles'
+  import { colors, fonts, zIndexes, mediaQueries } from '../project-styles/projectStyles'
 // 
 
 
@@ -14,16 +14,19 @@
     top: 100px;
     width: calc(100% - 180px);
     height: calc(100vh - 100px);
-    background: ${colors.blue};
+    background: ${ props => props.theme.mode === 'dark' ? colors.blue :  colors.white };
     z-index: ${zIndexes.collectionPreloader};
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: ${mediaQueries.tablet}) {
+        width: 100%;
+    }
 
     .preloaderContent{
         transform: translateY(-38px);
         text-align: center;
-        color: ${colors.white};
+        color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
 
         .title{
             font-size: 30px;
@@ -55,9 +58,19 @@
         const preloaderTl = gsap.timeline()
         let preloaderCollectionContainerRef = useRef()
         useEffect(() => {
-            preloaderTl.to(preloaderCollectionContainerRef, {duration: 1.2, yPercent: -100, ease: "Power2.easeInOut", delay: 1.8 }, "0")
-        })  
+            preloaderTl.to(preloaderCollectionContainerRef, {duration: 1.2, yPercent: -100, ease: "Power2.easeInOut", delay: 1.2 }, "0")
+        }, [preloaderTl])
     //
+
+    // Scoll to top
+      useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+    // 
+
+    // Disable Scroll on preloader
+      
+    // 
 
     return (
       <PreloaderContainer ref={ el => preloaderCollectionContainerRef = el}>

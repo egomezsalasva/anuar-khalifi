@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, zIndexes } from '../project-styles/projectStyles'
+import { colors, zIndexes, mediaQueries } from '../project-styles/projectStyles'
 
 
 
@@ -15,6 +15,9 @@ const HeaderBg = styled.div`
   display: flex;
   align-items: center;
   z-index: ${zIndexes.header};
+  @media (max-width: ${mediaQueries.tablet}) {
+    width: 100%;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -28,6 +31,9 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   z-index: ${zIndexes.headerContent};
+  @media (max-width: ${mediaQueries.tablet}) {
+    width: 100%;
+  }
 
   .headerContent{
     width: 100%;

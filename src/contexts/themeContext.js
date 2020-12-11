@@ -9,6 +9,7 @@ const ThemeContextProvider = ({children}) => {
     // Color Themeing
         const [contextTheme, setContextTheme] = useState({ mode: "dark" })
         const [themeColorToggle, setThemeColorToggle] = useState(false)
+        
         const themeColorToggleHandler = () => {
             if(themeColorToggle === false){
                 setContextTheme({ mode: "light"})
