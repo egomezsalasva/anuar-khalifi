@@ -106,8 +106,9 @@
     box-shadow: 1px 2px 15px 0 rgba(0,0,0,0.25);
     transform: translateX( calc((${widthInfoContainer}/2) - ${leftOffset})) translateY(${topOffset});
     @media (max-width: ${mediaQueries.mobile}) {
-      max-width: 100vw;
-      object-fit: contain;
+      width: 100vw;
+      height: auto;
+      /* object-fit: contain; */
       transform: translateX(0) translateY(0);
     }
   `
