@@ -108,6 +108,7 @@
     @media (max-width: ${mediaQueries.mobile}) {
       max-width: 100vw;
       object-fit: contain;
+      transform: translateX(0) translateY(0);
     }
   `
 //
