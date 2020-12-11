@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
+
     @media (max-width: ${mediaQueries.mobile}) {
       margin-top: 80px;
       max-width: 100vw;
@@ -40,6 +41,9 @@
       top: calc( (${pieceHeight} / 2) - 80px );
       left: calc( 40px + (${widthInfoContainer} / 2) );
       transform: translate( -${leftOffset}, ${topOffset} );
+      @media (max-width: ${mediaQueries.mobile}) {
+        display: none;
+      }
 
       .infoSquare{
         position: absolute;
