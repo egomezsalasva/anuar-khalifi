@@ -7,7 +7,6 @@
   import { colors, mediaQueries } from '../project-styles/projectStyles'
   //-Imgs
   import bioAnuar from '../imgs/bioAnuar.jpg'
-  import bioAnuarHover from '../imgs/bioAnuarHover.jpg'
 // 
 
 // STYLES
@@ -16,20 +15,27 @@
     width: calc(100vw - 180px);
     height: calc(100vh - 100px);
     margin-top: 100px;
-    /* background: yellow; */
     display: flex;
     align-items: center;
     @media (max-width: ${mediaQueries.tablet}) {
       width: 100%;
     }
+    @media (max-width: ${mediaQueries.mobile}) {
+      margin-top: 80px;
+      height: calc(100vh - 80px);
+      flex-direction: column;
+    }
 
     .imgContainer{
       width: ${imgContainerWidth};
       height: 100%;
-      /* background: red; */
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @media (max-width: ${mediaQueries.mobile}) {
+        justify-content: center;
+      }
       
       .imgWrapper{
         display: flex;
@@ -44,18 +50,20 @@
           background-repeat: no-repeat;
           background-size: cover;
 
-          /* &:hover{
-            background: url(${bioAnuarHover});
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-          } */
+          @media (max-width: ${mediaQueries.mobile}) {
+            margin-top: 3vh;
+            width: 80vw;
+            height: 55vh;
+          }
         }
         .credits{
           margin-top: 3px;
           font-size: 9px;
           color: ${colors.white};
-          opacity: 0.5;
+          opacity: 0.33;
+          @media (max-width: ${mediaQueries.mobile}) {
+            font-size: 7px;
+          }
         }
       }
     }
@@ -66,6 +74,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: ${mediaQueries.mobile}) {
+          width: 100%;
+      }
+
 
       .textWrapper{
         width: 70%;
@@ -73,10 +85,18 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        @media (max-width: ${mediaQueries.mobile}) {
+          height: auto;
+          width: 75%;
+          padding: 0 4vw;
+        }
 
           .text{
             /* font-size: 20px; */
             color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
+            @media (max-width: ${mediaQueries.mobile}) {
+              font-size: 14px;
+            }
           }
       }
     }
