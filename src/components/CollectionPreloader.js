@@ -56,6 +56,9 @@
             font-family: 'helvetica';
             font-size: 20px;
             font-weight: bold;
+            @media (max-width: ${mediaQueries.mobile}) {
+              font-size: 13px;
+            }
         }
 
     }
