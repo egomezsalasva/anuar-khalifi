@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
-    @media (max-width: ${mediaQueries.tablet}) {
+    @media (max-width: ${mediaQueries.mobile}) {
       margin-top: 80px;
       max-width: 100vw;
       height: calc(100vh - 80px);
@@ -101,7 +101,7 @@
     height: ${pieceHeight};
     box-shadow: 1px 2px 15px 0 rgba(0,0,0,0.25);
     transform: translateX( calc((${widthInfoContainer}/2) - ${leftOffset})) translateY(${topOffset});
-    @media (max-width: ${mediaQueries.tablet}) {
+    @media (max-width: ${mediaQueries.mobile}) {
       max-width: 100vw;
     }
   `
