@@ -61,7 +61,7 @@ const ColorThemeDot = styled.div`
   @media (max-width: ${mediaQueries.tablet}) {
     left: calc(50px + 18px + 15px);
   }
-  @media (max-width: ${mediaQueries.tablet}) {
+  @media (max-width: ${mediaQueries.mobile}) {
     top: 28px;
     left: calc(30px + 18px + 15px);
   }

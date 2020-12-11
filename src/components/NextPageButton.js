@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { colors } from '../project-styles/projectStyles'
+import { colors, mediaQueries } from '../project-styles/projectStyles'
 
 
 const ButtonContainer = styled.div`
@@ -27,6 +27,9 @@ const ButtonContainer = styled.div`
         span{
             font-size: 20px;
             margin-right: 10px;
+            @media (max-width: ${mediaQueries.mobile}) {
+                display: block;
+            }
         }
     }
 `
