@@ -37,6 +37,8 @@ import { zIndexes, mediaQueries } from '../project-styles/projectStyles'
               top: -11px;
               left: 5px;
               @media (max-width: ${mediaQueries.mobile}) {
+                top: -7px;
+                left: 3px;
                 font-size: 32px;
                 line-height: 62.5px;
               }
