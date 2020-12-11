@@ -18,6 +18,9 @@ const HeaderBg = styled.div`
   @media (max-width: ${mediaQueries.tablet}) {
     width: 100%;
   }
+  @media (max-width: ${mediaQueries.mobile}) {
+    height: 80px;
+  }
 `
 
 const HeaderContainer = styled.div`
@@ -34,6 +37,9 @@ const HeaderContainer = styled.div`
   @media (max-width: ${mediaQueries.tablet}) {
     width: 100%;
   }
+  @media (max-width: ${mediaQueries.mobile}) {
+    height: 80px;
+  }
 
   .headerContent{
     width: 100%;
@@ -41,6 +47,10 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: ${mediaQueries.mobile}) {
+      margin: 0 30px;
+    }
   }
 
 
