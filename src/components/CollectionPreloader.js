@@ -19,8 +19,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     @media (max-width: ${mediaQueries.tablet}) {
         width: 100%;
+    }
+    @media (max-width: ${mediaQueries.mobile}) {
+      top: 80px;
+      height: calc(100vh - 80px);
+      width: 100%;
     }
 
     .preloaderContent{
@@ -34,9 +40,15 @@
             font-family: ${fonts.text};
             margin-bottom: 10px;
             text-transform: capitalize;
+            @media (max-width: ${mediaQueries.mobile}) {
+              font-size: 19px;
+            }
 
             .arabicNum{
                 font-size: 40px;
+                @media (max-width: ${mediaQueries.mobile}) {
+                  font-size: 25px;
+                }
             }
         }
 
