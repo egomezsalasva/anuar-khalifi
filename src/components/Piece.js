@@ -4,7 +4,7 @@
   import styled from 'styled-components'
   import gsap from 'gsap'
   //-Assets
-  import { colors } from '../project-styles/projectStyles'
+  import { colors, mediaQueries } from '../project-styles/projectStyles'
 // 
 
 
@@ -26,6 +26,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 150px;
+    @media (max-width: ${mediaQueries.tablet}) {
+      margin-top: 80px;
+      max-width: 100vw;
+      height: calc(100vh - 80px);
+    }
 
     .infoPiece{
       display: inline-block;
