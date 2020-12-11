@@ -57,13 +57,13 @@ const ColorThemeDot = styled.div`
   border: ${ props => props.theme.mode === 'dark' ? "2px solid" + colors.blue :  "2px solid" + colors.white };
   cursor: pointer;
   z-index: ${zIndexes.menuButtons};
-  
+
   @media (max-width: ${mediaQueries.tablet}) {
     left: calc(50px + 18px + 15px);
   }
   @media (max-width: ${mediaQueries.tablet}) {
     top: 28px;
-    left: 30px;
+    left: calc(30px + 18px + 15px);
   }
 `
 
