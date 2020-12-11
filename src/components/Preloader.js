@@ -165,6 +165,12 @@ const Preloader = () => {
     })
   //
 
+  // Scoll to top
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
+  //
+
   return (
     <PreLoader ref={el => {preloaderContainerRef = el}}>
         <div className="percentageContainer">
