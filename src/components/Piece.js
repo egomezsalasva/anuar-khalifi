@@ -29,8 +29,9 @@
     @media (max-width: ${mediaQueries.mobile}) {
       max-width: 100vw;
       height: auto;
-      margin-bottom: 220px;
-      margin-top: 220px;
+      margin-bottom: 180px;
+      margin-top: 180px;
+      flex-direction: column;
     }
 
     .infoPiece{
@@ -42,7 +43,14 @@
       left: calc( 40px + (${widthInfoContainer} / 2) );
       transform: translate( -${leftOffset}, ${topOffset} );
       @media (max-width: ${mediaQueries.mobile}) {
-        display: none;
+        transform: translate(0, 0);
+        left: 0;
+        top: 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 30px;
       }
 
       .infoSquare{
@@ -53,6 +61,11 @@
         height: 20px;
         background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
         cursor: pointer;
+        @media (max-width: ${mediaQueries.mobile}) {
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       .infoTextWrapper{
@@ -65,6 +78,12 @@
         right: 0;
         bottom: 0;
         max-width: 160px;
+
+        @media (max-width: ${mediaQueries.mobile}) {
+          top: 35px;
+          width: 100%;
+          max-width: 100%;
+        }
 
         .nameOverflow{
           overflow: hidden;
