@@ -3,9 +3,7 @@
   import React from 'react'
   import styled from 'styled-components'
   //-Components
-  //import Preloader from '../components/Preloader'
   import Header from './Header'
-  // import Menu from './Menu'
   //-Styles
   import { colors, mediaQueries } from '../project-styles/projectStyles'
 // 
@@ -25,18 +23,18 @@
     @media (max-width: ${mediaQueries.tablet}) {
       width: 100%;
     }
+    /* @media (max-width: ${mediaQueries.mobile}) {
+      margin-top: 80px;
+    } */
   `
 //
 
 
 // MAIN COMPONENT
-  const PageWrapper = ({children, navTitleProp }) => {
+  const PageWrapper = ({ children }) => {
 
     return (
       <Container>
-
-        {/* <Preloader /> */}
-        {/* <Menu navTitleProp={navTitleProp} /> */}
 
         <RightContent>    
           <Header />

@@ -20,7 +20,6 @@
     position: relative;
     width: 100%;
     height: calc(100vh - 100px);
-    /* min-height: 700px; */
     margin-top: 100px;
     display: flex;
     align-items: center;
@@ -28,9 +27,10 @@
     margin-bottom: 150px;
 
     @media (max-width: ${mediaQueries.mobile}) {
-      margin-top: 80px;
       max-width: 100vw;
-      height: calc(100vh - 80px);
+      height: auto;
+      margin-bottom: 200px;
+      margin-top: 200px;
     }
 
     .infoPiece{
@@ -106,9 +106,8 @@
     box-shadow: 1px 2px 15px 0 rgba(0,0,0,0.25);
     transform: translateX( calc((${widthInfoContainer}/2) - ${leftOffset})) translateY(${topOffset});
     @media (max-width: ${mediaQueries.mobile}) {
-      width: 100vw;
+      width: calc(100vw - 15px - 15px);
       height: auto;
-      /* object-fit: contain; */
       transform: translateX(0) translateY(0);
     }
   `

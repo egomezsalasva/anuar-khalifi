@@ -10,6 +10,7 @@ const ButtonContainer = styled.div`
     background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
     margin-top: 130px;
     @media (max-width: ${mediaQueries.mobile}) {
+        margin-top: 0px;
         height: 120px;
     }
 
