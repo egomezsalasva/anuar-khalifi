@@ -29,8 +29,8 @@
     @media (max-width: ${mediaQueries.mobile}) {
       max-width: 100vw;
       height: auto;
-      margin-bottom: 180px;
-      margin-top: 180px;
+      margin-bottom: 140px;
+      margin-top: 140px;
       flex-direction: column;
     }
 
