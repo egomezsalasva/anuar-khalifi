@@ -1,6 +1,6 @@
 // IMPORTS
   //-Modules
-  import React, { useEffect, useRef } from 'react'
+  import React, { useEffect, useRef, useState, useLayoutEffect } from 'react'
   import styled from 'styled-components'
   import gsap from 'gsap'
   import { LazyLoadImage } from 'react-lazy-load-image-component'
@@ -135,8 +135,24 @@
 //
 
 
+// CUSTOM RESIZE HOOK
+  const useWindowSize = () => {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+// 
+
+
 // MAIN COMPONENT
-  const Piece = ({ imageProp, nameProp, measurementsProp, techniquesProp }) => {
+  const Piece = ({ imageProp, imageMobileProp, nameProp, measurementsProp, techniquesProp }) => {
 
     const infoTl = gsap.timeline({ paused: true })
 
@@ -148,12 +164,14 @@
       infoTl.to([nameRef, techniquesRef, measurementsRef], {duration: 0.375, yPercent: -100, stagger: 0.125, ease: "Power1.easeInOut"})
     }, [infoTl])
 
+    const [width] = useWindowSize()
 
     
     return (
         <PieceContainer>
 
-            <PieceImg src={imageProp} alt={nameProp} effect="blur" />
+
+            { width < 430 ? <PieceImg src={imageMobileProp} alt={nameProp} effect="blur" /> : <PieceImg src={imageProp} alt={nameProp} effect="blur" /> }
             
             <div className="infoPiece">
 

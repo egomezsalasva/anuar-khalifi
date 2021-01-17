@@ -1,5 +1,6 @@
 //-Assets
 import alHaddidImg from '../imgs/alHaddid.png'
+import alHaddidMob from '../imgs/alHaddidMob.png'
 // import triptic from '../imgs/triptic.png'
 import mustafaTheExpatImg from '../imgs/mustafaTheExpat.png'
 import dustMakersImg from '../imgs/dustMakers.png'
@@ -71,6 +72,7 @@ const piecesData = {
     foreverIsACurrentEventPt1: [
         {
             img: alHaddidImg,
+            imgMobile: alHaddidMob,
             name: "Al Haddid",
             techniques: "Acrylic on canvas",
             measurements: "200 / 160",
@@ -79,30 +81,35 @@ const piecesData = {
     foreverIsACurrentEventPt2: [
         {
             img: mustafaTheExpatImg,
+            imgMobile: alHaddidMob,
             name: "Mustafa The Expat",
             techniques: "Acrylic on canvas",
             measurements: "125 / 98",
         },
         {
             img: dustMakersImg,
+            imgMobile: alHaddidMob,
             name: "Dust Makers",
             techniques: "Acrylic on canvas",
             measurements: "190 / 140",
         },
         {
             img: weListenToAbdulImg,
+            imgMobile: alHaddidMob,
             name: "We Listen To Abdul-Bassit When We Open",
             techniques: "Acrylic on paper",
             measurements: "80 / 65",
         },
         {
             img: istiqamaImg,
+            imgMobile: alHaddidMob,
             name: "Istiqama",
             techniques: "Acrylic on canvas",
             measurements: "200 / 170",
         },
         {
             img: iveBeenHereBeforeImg,
+            imgMobile: alHaddidMob,
             name: "I've Been Here Before",
             techniques: "Acrylic on canvas",
             measurements: "80 / 57",
@@ -115,6 +122,7 @@ const piecesData = {
         // },
         {
             img: beKindAndRewindImg,
+            imgMobile: alHaddidMob,
             name: "Be Kind And Rewind",
             techniques: "Acrylic on canvas",
             measurements: "200 / 150",

@@ -28,6 +28,7 @@
             <Piece
               key={pieceItem.name}
               imageProp={pieceItem.img}
+              imageMobileProp={pieceItem.imgMobile}
               nameProp={pieceItem.name}
               measurementsProp={pieceItem.measurements}
               techniquesProp={pieceItem.techniques}
@@ -42,6 +43,7 @@
             <Piece
               key={pieceItem.name}
               imageProp={pieceItem.img}
+              imageMobileProp={pieceItem.imgMobile}
               nameProp={pieceItem.name}
               measurementsProp={pieceItem.measurements}
               techniquesProp={pieceItem.techniques}
