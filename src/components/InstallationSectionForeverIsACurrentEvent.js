@@ -38,6 +38,8 @@
     const PieceImg = styled.img`
         position: relative;
         height: ${pieceHeight};
+        max-width: 90%;
+        object-fit: contain;
     `
 //
 

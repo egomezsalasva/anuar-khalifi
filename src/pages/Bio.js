@@ -115,7 +115,7 @@
             <div className="imgContainer">
                 <div className="imgWrapper">
                   <div className="img" />
-                  <div className="credits">© Dani Pujanta</div>
+                  <div className="credits">© Dani Pujalte</div>
                 </div>
             </div>
             <div className="textContainer">

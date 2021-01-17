@@ -3,6 +3,8 @@
   import React, { useEffect, useRef } from 'react'
   import styled from 'styled-components'
   import gsap from 'gsap'
+  import { LazyLoadImage } from 'react-lazy-load-image-component'
+  import 'react-lazy-load-image-component/src/effects/blur.css'
   //-Assets
   import { colors, mediaQueries } from '../project-styles/projectStyles'
 // 
@@ -119,7 +121,7 @@
       }
     }
   `
-  const PieceImg = styled.img`
+  const PieceImg = styled(LazyLoadImage)`
     position: relative;
     height: ${pieceHeight};
     box-shadow: 1px 2px 15px 0 rgba(0,0,0,0.25);
@@ -151,7 +153,7 @@
     return (
         <PieceContainer>
 
-            <PieceImg src={imageProp} alt={nameProp} />
+            <PieceImg src={imageProp} alt={nameProp} effect="blur" />
             
             <div className="infoPiece">
 

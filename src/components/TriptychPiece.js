@@ -19,20 +19,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     .infoTriptychPiece{
-      display: inline-block;
       position: relative;
-      height: 100px;
-      top: calc( 50px + 214px + 30px );
-      left: calc( -50% + 95px);
-      /* background: red; */
-      width: 1000px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin-top: 30px;
 
       .infoSquare{
         position: absolute;
-        top: 0;
-        left: calc( 50% - 10px );
+        left: 50%;
+        transform: translateX(-50%);
         width: 20px;
         height: 20px;
         background: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
@@ -41,16 +40,13 @@
 
       .infoTextWrapper{
         position: absolute;
+        top: 35px;
         font-weight: bold;
         font-size: 12px;
         line-height: 1.1;
         color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
         width: 500px;
-        bottom: 0;
-        left: 93px;
         text-align: center;
-        transform: translateX( -50% );
-        /* background: yellow; */
 
         .nameOverflow{
           overflow: hidden;
@@ -87,10 +83,10 @@
     }
   `
   const PieceImg = styled.img`
-    position: relative;
-    width: 85%;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
   `
 //
 
@@ -111,6 +107,7 @@
     
     return (
         <PieceContainer>
+
 
             <PieceImg src={triptychTheNegus} alt='The Negus Asked Me "Do you want to be Sultan or Rumi? And Then Opened A Pomegranate' />
             

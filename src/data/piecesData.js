@@ -31,10 +31,16 @@ const piecesData = {
 
     selectedWorks: [
         {
-            img: waqtImg,
-            name: "Waqt",
+            img: ghurbaImg,
+            name: "Ghurba",
             techniques: "Acrylic on canvas",
-            measurements: "160 / 195",
+            measurements: "145 / 114",
+        },
+        {
+            img: mawqifImg,
+            name: "Mawqif",
+            techniques: "Acrylic on canvas",
+            measurements: "140 / 114",
         },
         {
             img: theOpeningImg,
@@ -55,16 +61,10 @@ const piecesData = {
             measurements: "195 / 150",
         },
         {
-            img: ghurbaImg,
-            name: "Ghurba",
+            img: waqtImg,
+            name: "Waqt",
             techniques: "Acrylic on canvas",
-            measurements: "145 / 114",
-        },
-        {
-            img: mawqifImg,
-            name: "Mawqif",
-            techniques: "Acrylic on canvas",
-            measurements: "140 / 114",
+            measurements: "160 / 195",
         },
     ],
     
