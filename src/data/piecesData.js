@@ -27,16 +27,26 @@ import iveBeenHereBeforeMobImg from '../imgs/foreverIsACurrentEventAssets/iveBee
 import beKindAndRewindImg from '../imgs/foreverIsACurrentEventAssets/beKindAndRewind.png'
 import beKindAndRewindMobImg from '../imgs/foreverIsACurrentEventAssets/beKindAndRewindMob.png'
 
-import fanaaImg from '../imgs/fanaa.png'
-import elMoriscoDeVelazquezImg from '../imgs/elMoriscoDeVelazquez.png'
-import rosesAndCockroachesImg from '../imgs/rosesAndCockroaches.png'
-import donkeyOrHorseImg from '../imgs/donkeyOrHorse.png'
-import dustRiderIImg from '../imgs/dustRiderI.png'
-import dustRiderIIImg from '../imgs/dustRiderII.png'
-import dustRiderIIIImg from '../imgs/dustRiderIII.png'
-import desertCastleImg from '../imgs/desertCastle.png'
-import trembleImg from '../imgs/tremble.png'
-import trophyRoomImg from '../imgs/trophyRoom.png'
+import fanaaImg from '../imgs/dustRosesAndCockroachesAssets/fanaa.png'
+import fanaaMobImg from '../imgs/dustRosesAndCockroachesAssets/fanaaMob.png'
+import elMoriscoDeVelazquezImg from '../imgs/dustRosesAndCockroachesAssets/elMoriscoDeVelazquez.png'
+import elMoriscoDeVelazquezMobImg from '../imgs/dustRosesAndCockroachesAssets/elMoriscoDeVelazquezMob.png'
+import rosesAndCockroachesImg from '../imgs/dustRosesAndCockroachesAssets/rosesAndCockroaches.png'
+import rosesAndCockroachesMobImg from '../imgs/dustRosesAndCockroachesAssets/rosesAndCockroachesMob.png'
+import donkeyOrHorseImg from '../imgs/dustRosesAndCockroachesAssets/donkeyOrHorse.png'
+import donkeyOrHorseMobImg from '../imgs/dustRosesAndCockroachesAssets/donkeyOrHorseMob.png'
+import dustRiderIImg from '../imgs/dustRosesAndCockroachesAssets/dustRiderI.png'
+import dustRiderIMobImg from '../imgs/dustRosesAndCockroachesAssets/dustRiderIMob.png'
+import dustRiderIIImg from '../imgs/dustRosesAndCockroachesAssets/dustRiderII.png'
+import dustRiderIIMobImg from '../imgs/dustRosesAndCockroachesAssets/dustRiderIIMob.png'
+import dustRiderIIIImg from '../imgs/dustRosesAndCockroachesAssets/dustRiderIII.png'
+import dustRiderIIIMobImg from '../imgs/dustRosesAndCockroachesAssets/dustRiderIIIMob.png'
+import desertCastleImg from '../imgs/dustRosesAndCockroachesAssets/desertCastle.png'
+import desertCastleMobImg from '../imgs/dustRosesAndCockroachesAssets/desertCastleMob.png'
+import trembleImg from '../imgs/dustRosesAndCockroachesAssets/tremble.png'
+import trembleMobImg from '../imgs/dustRosesAndCockroachesAssets/trembleMob.png'
+import trophyRoomImg from '../imgs/dustRosesAndCockroachesAssets/trophyRoom.png'
+import trophyRoomMobImg from '../imgs/dustRosesAndCockroachesAssets/trophyRoomMob.png'
 
 
 
@@ -144,60 +154,70 @@ const piecesData = {
     dustRosesAndCockroaches: [
         {
             img: fanaaImg,
+            imgMobile: fanaaMobImg,
             name: "Fanaa",
             techniques: "Acrylic on canvas",
             measurements: "99 / 70",
         },
         {
             img: elMoriscoDeVelazquezImg,
+            imgMobile: elMoriscoDeVelazquezMobImg,
             name: "El morisco de Velazquez",
             techniques: "Acrylic on canvas",
             measurements: "81 / 69",
         },
         {
             img: rosesAndCockroachesImg,
+            imgMobile: rosesAndCockroachesMobImg,
             name: "Roses & cockroaches",
             techniques: "Acrylic on canvas",
             measurements: "183 / 144",
         },
         {
             img: donkeyOrHorseImg,
+            imgMobile: donkeyOrHorseMobImg,
             name: "Donkey Or Horse",
             techniques: "Acrylic on canvas",
             measurements: "197 / 192",
         },
         {
             img: dustRiderIImg,
+            imgMobile: dustRiderIMobImg,
             name: "Dust rider I",
             techniques: "Acrylic on paper",
             measurements: "70 / 50",
         },
         {
             img: dustRiderIIImg,
+            imgMobile: dustRiderIIMobImg,
             name: "Dust rider II",
             techniques: "Acrylic on paper",
             measurements: "70 / 50",
         },
         {
             img: dustRiderIIIImg,
+            imgMobile: dustRiderIIIMobImg,
             name: "Dust rider III",
             techniques: "Acrylic on paper",
             measurements: "70 / 50",
         },
         {
             img: desertCastleImg,
+            imgMobile: desertCastleMobImg,
             name: "Desert castle",
             techniques: "Acrylic on canvas",
             measurements: "143 / 111",
         },
         {
             img: trembleImg,
+            imgMobile: trembleMobImg,
             name: "Tremble",
             techniques: "Acrylic on canvas",
             measurements: "141 / 103",
         },
         {
             img: trophyRoomImg,
+            imgMobile: trophyRoomMobImg,
             name: "Trophy Room",
             techniques: "Acrylic on canvas",
             measurements: "167 / 130",
