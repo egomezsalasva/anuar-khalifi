@@ -2,6 +2,8 @@
   //-Modules
   import React from 'react'
   import styled from 'styled-components'
+  import { LazyLoadImage } from 'react-lazy-load-image-component'
+  import 'react-lazy-load-image-component/src/effects/blur.css'
   //-Components
   import PageWrapper from '../components/PageWrapper'
   import { colors, mediaQueries } from '../project-styles/projectStyles'

@@ -3,6 +3,8 @@
   import React, { useEffect, useRef } from 'react'
   import styled from 'styled-components'
   import gsap from 'gsap'
+  import { LazyLoadImage } from 'react-lazy-load-image-component'
+  import 'react-lazy-load-image-component/src/effects/blur.css'
   //-Assets
   import { colors } from '../project-styles/projectStyles'
   import triptychTheNegus from '../imgs/triptychTheNegus.png'
@@ -82,7 +84,7 @@
       }
     }
   `
-  const PieceImg = styled.img`
+  const PieceImg = styled(LazyLoadImage)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +111,7 @@
         <PieceContainer>
 
 
-            <PieceImg src={triptychTheNegus} alt='The Negus Asked Me "Do you want to be Sultan or Rumi? And Then Opened A Pomegranate' />
+            <PieceImg src={triptychTheNegus} alt='The Negus Asked Me "Do you want to be Sultan or Rumi? And Then Opened A Pomegranate'/>
             
             <div className="infoTriptychPiece">
 

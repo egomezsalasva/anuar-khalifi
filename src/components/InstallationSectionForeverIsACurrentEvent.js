@@ -2,6 +2,8 @@
   //-Modules
   import React from 'react'
   import styled from 'styled-components'
+  import { LazyLoadImage } from 'react-lazy-load-image-component'
+  import 'react-lazy-load-image-component/src/effects/blur.css'
   //-Assets
   import { colors } from '../project-styles/projectStyles'
   import installationView01Img from '../imgs/InstallationView01.png'
@@ -35,7 +37,7 @@
         justify-content: center;
     `
 
-    const PieceImg = styled.img`
+    const PieceImg = styled(LazyLoadImage)`
         position: relative;
         height: ${pieceHeight};
         max-width: 90%;
@@ -56,19 +58,19 @@
             <Title>Installation Views</Title>
 
             <PieceContainer>
-                <PieceImg src={installationView02Img} alt="Installation View 02" />
+                <PieceImg src={installationView02Img} alt="Installation View 02" effect="blur" />
             </PieceContainer>
 
             <PieceContainer>
-                <PieceImg src={installationView01Img} alt="Installation View 01" />
+                <PieceImg src={installationView01Img} alt="Installation View 01" effect="blur"/>
             </PieceContainer>
 
             <PieceContainer>
-                <PieceImg src={installationView03Img} alt="Installation View 03" />
+                <PieceImg src={installationView03Img} alt="Installation View 03" effect="blur"/>
             </PieceContainer>
 
             <PieceContainer>
-                <PieceImg src={installationView04Img} alt="Installation View 04" />
+                <PieceImg src={installationView04Img} alt="Installation View 04" effect="blur"/>
             </PieceContainer>
 
         </>
