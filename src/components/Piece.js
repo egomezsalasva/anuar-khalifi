@@ -171,7 +171,7 @@
         <PieceContainer>
 
 
-            { width < 430 ? <PieceImg src={imageMobileProp} alt={nameProp} effect="blur" /> : <PieceImg src={imageProp} alt={nameProp} effect="blur" /> }
+            { width < 430 ? <PieceImg src={imageMobileProp} alt={nameProp} effect="blur" threshold="1000" /> : <PieceImg src={imageProp} alt={nameProp} effect="blur" threshold="1000" placeholderSrc={imageMobileProp} /> }
             
             <div className="infoPiece">
 

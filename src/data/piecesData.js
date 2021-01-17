@@ -1,14 +1,31 @@
 //-Assets
-import alHaddidImg from '../imgs/alHaddid.png'
-import alHaddidMob from '../imgs/alHaddidMob.png'
-// import triptic from '../imgs/triptic.png'
-import mustafaTheExpatImg from '../imgs/mustafaTheExpat.png'
-import dustMakersImg from '../imgs/dustMakers.png'
-import weListenToAbdulImg from '../imgs/weListenToAbdul-BassitWhenWeOpen.png'
-import istiqamaImg from '../imgs/istiqama.png'
-import iveBeenHereBeforeImg from '../imgs/iveBeenHereBefore.png'
-// import fcaImg from '../imgs/fca.png'
-import beKindAndRewindImg from '../imgs/beKindAndRewind.png'
+import ghurbaImg from '../imgs/selectedWorks/ghurba.png'
+import ghurbaMobImg from '../imgs/selectedWorks/ghurbaMob.png'
+import mawqifImg from '../imgs/selectedWorks/mawqif.png'
+import mawqifMobImg from '../imgs/selectedWorks/mawqifMob.png'
+import theOpeningImg from '../imgs/selectedWorks/theOpening.png'
+import theOpeningMobImg from '../imgs/selectedWorks/theOpeningMob.png'
+import aMansChestCanOnlyHoldOneImg from '../imgs/selectedWorks/aMansChestCanOnlyHoldOne.png'
+import aMansChestCanOnlyHoldOneMobImg from '../imgs/selectedWorks/aMansChestCanOnlyHoldOneMob.png'
+import theLightBlossomImg from '../imgs/selectedWorks/theLightBlossom.png'
+import theLightBlossomMobImg from '../imgs/selectedWorks/theLightBlossomMob.png'
+import waqtImg from '../imgs/selectedWorks/waqt.png'
+import waqtMobImg from '../imgs/selectedWorks/waqtMob.png'
+
+import alHaddidImg from '../imgs/foreverIsACurrentEventAssets/alHaddid.png'
+import alHaddidMobImg from '../imgs/foreverIsACurrentEventAssets/alHaddidMob.png'
+import mustafaTheExpatImg from '../imgs/foreverIsACurrentEventAssets/mustafaTheExpat.png'
+import mustafaTheExpatMobImg from '../imgs/foreverIsACurrentEventAssets/mustafaTheExpatMob.png'
+import dustMakersImg from '../imgs/foreverIsACurrentEventAssets/dustMakers.png'
+import dustMakersMobImg from '../imgs/foreverIsACurrentEventAssets/dustMakersMob.png'
+import weListenToAbdulImg from '../imgs/foreverIsACurrentEventAssets/weListenToAbdul-BassitWhenWeOpen.png'
+import weListenToAbdulMobImg from '../imgs/foreverIsACurrentEventAssets/weListenToAbdul-BassitWhenWeOpenMob.png'
+import istiqamaImg from '../imgs/foreverIsACurrentEventAssets/istiqama.png'
+import istiqamaMobImg from '../imgs/foreverIsACurrentEventAssets/istiqamaMob.png'
+import iveBeenHereBeforeImg from '../imgs/foreverIsACurrentEventAssets/iveBeenHereBefore.png'
+import iveBeenHereBeforeMobImg from '../imgs/foreverIsACurrentEventAssets/iveBeenHereBeforeMob.png'
+import beKindAndRewindImg from '../imgs/foreverIsACurrentEventAssets/beKindAndRewind.png'
+import beKindAndRewindMobImg from '../imgs/foreverIsACurrentEventAssets/beKindAndRewindMob.png'
 
 import fanaaImg from '../imgs/fanaa.png'
 import elMoriscoDeVelazquezImg from '../imgs/elMoriscoDeVelazquez.png'
@@ -21,48 +38,49 @@ import desertCastleImg from '../imgs/desertCastle.png'
 import trembleImg from '../imgs/tremble.png'
 import trophyRoomImg from '../imgs/trophyRoom.png'
 
-import waqtImg from '../imgs/waqt.png'
-import theOpeningImg from '../imgs/theOpening.png'
-import aMansChestCanOnlyHoldOneImg from '../imgs/aMansChestCanOnlyHoldOne.png'
-import theLightBlossomImg from '../imgs/theLightBlossom.png'
-import ghurbaImg from '../imgs/ghurba.png'
-import mawqifImg from '../imgs/mawqif.png'
+
 
 const piecesData = {
 
     selectedWorks: [
         {
             img: ghurbaImg,
+            imgMobile: ghurbaMobImg,
             name: "Ghurba",
             techniques: "Acrylic on canvas",
             measurements: "145 / 114",
         },
         {
             img: mawqifImg,
+            imgMobile: mawqifMobImg,
             name: "Mawqif",
             techniques: "Acrylic on canvas",
             measurements: "140 / 114",
         },
         {
             img: theOpeningImg,
+            imgMobile: theOpeningMobImg,
             name: "The Opening",
             techniques: "Acrylic on canvas",
             measurements: "200 / 210",
         },
         {
             img: aMansChestCanOnlyHoldOneImg,
+            imgMobile: aMansChestCanOnlyHoldOneMobImg,
             name: "A Man's Chest Can Only Hold One",
             techniques: "Acrylic on canvas",
             measurements: "162 / 205",
         },
         {
             img: theLightBlossomImg,
+            imgMobile: theLightBlossomMobImg,
             name: "The Light Blossom",
             techniques: "Acrylic on canvas",
             measurements: "195 / 150",
         },
         {
             img: waqtImg,
+            imgMobile: waqtMobImg,
             name: "Waqt",
             techniques: "Acrylic on canvas",
             measurements: "160 / 195",
@@ -72,7 +90,7 @@ const piecesData = {
     foreverIsACurrentEventPt1: [
         {
             img: alHaddidImg,
-            imgMobile: alHaddidMob,
+            imgMobile: alHaddidMobImg,
             name: "Al Haddid",
             techniques: "Acrylic on canvas",
             measurements: "200 / 160",
@@ -81,48 +99,42 @@ const piecesData = {
     foreverIsACurrentEventPt2: [
         {
             img: mustafaTheExpatImg,
-            imgMobile: alHaddidMob,
+            imgMobile: mustafaTheExpatMobImg,
             name: "Mustafa The Expat",
             techniques: "Acrylic on canvas",
             measurements: "125 / 98",
         },
         {
             img: dustMakersImg,
-            imgMobile: alHaddidMob,
+            imgMobile: dustMakersMobImg,
             name: "Dust Makers",
             techniques: "Acrylic on canvas",
             measurements: "190 / 140",
         },
         {
             img: weListenToAbdulImg,
-            imgMobile: alHaddidMob,
+            imgMobile: weListenToAbdulMobImg,
             name: "We Listen To Abdul-Bassit When We Open",
             techniques: "Acrylic on paper",
             measurements: "80 / 65",
         },
         {
             img: istiqamaImg,
-            imgMobile: alHaddidMob,
+            imgMobile: istiqamaMobImg,
             name: "Istiqama",
             techniques: "Acrylic on canvas",
             measurements: "200 / 170",
         },
         {
             img: iveBeenHereBeforeImg,
-            imgMobile: alHaddidMob,
+            imgMobile: iveBeenHereBeforeMobImg,
             name: "I've Been Here Before",
             techniques: "Acrylic on canvas",
             measurements: "80 / 57",
         },
-        // {
-        //     img: fcaImg,
-        //     name: "F.C.A.",
-        //     techniques: "Acrylic on canvas",
-        //     measurements: "130 / 100",
-        // },
         {
             img: beKindAndRewindImg,
-            imgMobile: alHaddidMob,
+            imgMobile: beKindAndRewindMobImg,
             name: "Be Kind And Rewind",
             techniques: "Acrylic on canvas",
             measurements: "200 / 150",
