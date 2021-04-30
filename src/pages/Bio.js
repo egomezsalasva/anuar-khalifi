@@ -6,9 +6,12 @@
   import 'react-lazy-load-image-component/src/effects/blur.css'
   //-Components
   import PageWrapper from '../components/PageWrapper'
-  import { colors, mediaQueries } from '../project-styles/projectStyles'
+  import BioExhibition from '../components/BioExhibitions'
+  import BioYear from '../components/BioYear'
   //-Imgs
   import bioAnuar from '../imgs/bioAnuar.jpg'
+  //-Styles
+  import { colors, mediaQueries } from '../project-styles/projectStyles'
 // 
 
 // STYLES
@@ -40,6 +43,7 @@
       }
       
       .imgWrapper{
+        position: fixed;
         display: flex;
         align-items: left;
         justify-content: center;
@@ -87,14 +91,17 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        flex-direction: column;
         @media (max-width: ${mediaQueries.mobile}) {
           height: auto;
           width: 75%;
           padding: 0 4vw;
+          overflow: auto;
         }
 
           .text{
             color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
+            width: 450px;
             @media (max-width: ${mediaQueries.mobile}) {
               text-align: center;
               font-size: 14px;
@@ -127,7 +134,74 @@
                     <br/>
                     Lives and works between Tangier, MA and Barcelona, ES
                   </div>
+                  <BioExhibition title="Solo Exhibitions">
+                    <BioYear year="2019">
+                      <li>Forever Is A Current Event, The Third Line, Dubai, AE</li>
+                    </BioYear>
+                    <BioYear year="2018">
+                      <li>Dust, Roses & Cockroaches, Galerie Shart, Casablanca, MA</li>
+                    </BioYear>
+                    <BioYear year="2016">
+                      <li>El niño que le dolía el cuello de tanto mirar el cielo, Plom Gallery, Barcelona, ES</li>
+                    </BioYear>
+                    <BioYear year="2015">
+                      <li>Désorienté, BCN The Mothership, Barcelona, ES</li>
+                    </BioYear>
+                    <BioYear year="2014">
+                      <li>Désorienté, Yakin and Boaz Gallery, Casablanca, MA</li>
+                    </BioYear>
+                    <BioYear year="2012">
+                      <li>Tourist Go Home, Galerie Kandisha, Paris, FR</li>
+                    </BioYear>
+                    <BioYear year="2011">
+                      <li>Boys don’t cry, Artingis, Tanger, MA</li>
+                      <li>Fast Food, Les Insolites, Tanger, MA</li>
+                    </BioYear>
+                  </BioExhibition>
+
+                  <BioExhibition title="Group Exhibitions">
+                    <BioYear year="2021">
+                      <li>Ce qui s'oublie et ce qui reste, Musée national de l’histoire de l’immigration, Paris, FR</li>
+                    </BioYear>
+                    <BioYear year="2020">
+                      <li>Personal Mythologies, Galerie Julien Cadet, Paris, FR</li>
+                    </BioYear>
+                    <BioYear year="2017">
+                      <li>Héros, Anti-héros, Personnages Extraordinaires, Comptoir des Mines Galerie, Marrakech, MA</li>
+                    </BioYear>
+                    <BioYear year="2015">
+                      <li>Les nouvelles créations artistiques, Bank Al-Maghrib, Rabat, MA</li>
+                    </BioYear>
+                    <BioYear year="2014">
+                      <li>Group show, Galerie Shart, Casablanca, MA</li>
+                    </BioYear>
+                    <BioYear year="2012">
+                      <li>A new hope, Mitte Artspace Barcelona, Barcelona, ES</li>
+                      <li>Blast, curated by Mehdi Hadj Khalifa, Mastermind, GVCC, Casablanca, MA</li>
+                    </BioYear>
+                  </BioExhibition>
+
+                  <BioExhibition title="ART FAIRS AND BIENNALES">
+                    <BioYear year="2020">
+                      <li>Frieze London, The Third Line, London, UK</li>
+                    </BioYear>
+                    <BioYear year="2019">
+                      <li>Art Cologne, Nosbaum Reding, Cologne, DE</li>
+                      <li>Art Brussels, Nosbaum Reding, Brussels, BE</li>
+                      <li>Art Geneve, Nosbaum Reding, Geneva, CH</li>
+                    </BioYear>
+                    <BioYear year="2012">
+                      <li>Now, curated by Mehdi Hadj Khalifa, Arts in Marrakech Biennale, Marrakech, MA</li>
+                    </BioYear>
+                  </BioExhibition>
+                  <BioExhibition title="COLLECTIONS">
+                    <BioYear year="">
+                      <li>MACAAL, Musée d'Art contemporain africain Al-Maaden, Marrakech, MA</li>
+                    </BioYear>
+                  </BioExhibition>
                 </div>
+
+
             </div>
           </BioContainer>
 
