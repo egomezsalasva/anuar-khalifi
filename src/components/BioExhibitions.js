@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../project-styles/projectStyles'
+import { colors, mediaQueries } from '../project-styles/projectStyles'
 
 
 const ExhibitionWrapper = styled.div`
@@ -9,6 +9,12 @@ const ExhibitionWrapper = styled.div`
     width: 450px;
     &:last-of-type{
         padding-bottom: 100px;
+    }
+    @media (max-width: ${mediaQueries.mobile}) {
+        width: auto;
+        &:last-of-type{
+            padding-bottom: 4vw;
+        }
     }
 
     .title{

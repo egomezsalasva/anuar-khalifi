@@ -48,6 +48,9 @@
         align-items: left;
         justify-content: center;
         flex-direction: column;
+        @media (max-width: ${mediaQueries.mobile}) {
+          position: static;
+        }
 
         .img{
           width: 380px;
@@ -81,7 +84,9 @@
       align-items: center;
       justify-content: center;
       @media (max-width: ${mediaQueries.mobile}) {
+          margin-top: 4vh;
           width: 100%;
+          flex-direction: column;
       }
 
 
@@ -93,16 +98,16 @@
         justify-content: flex-start;
         flex-direction: column;
         @media (max-width: ${mediaQueries.mobile}) {
-          height: auto;
+          height: 100%;
           width: 75%;
           padding: 0 4vw;
-          overflow: auto;
         }
 
           .text{
             color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
             width: 450px;
             @media (max-width: ${mediaQueries.mobile}) {
+              width: auto;
               text-align: center;
               font-size: 14px;
               margin-bottom: 30px;
