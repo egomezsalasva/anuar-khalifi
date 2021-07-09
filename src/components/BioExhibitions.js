@@ -17,6 +17,11 @@ const ExhibitionWrapper = styled.div`
         }
     }
 
+    a{
+        text-decoration: underline;
+        color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
+    }
+
     .title{
         text-transform: uppercase;
         text-decoration: underline;

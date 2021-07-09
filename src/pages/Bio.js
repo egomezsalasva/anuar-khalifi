@@ -9,7 +9,7 @@
   import BioExhibition from '../components/BioExhibitions'
   import BioYear from '../components/BioYear'
   //-Imgs
-  import bioAnuar from '../imgs/bioAnuar.jpg'
+  import bioAnuar from '../imgs/bioAnuarMarroi.jpg'
   //-Styles
   import { colors, mediaQueries } from '../project-styles/projectStyles'
 // 
@@ -129,7 +129,7 @@
             <div className="imgContainer">
                 <div className="imgWrapper">
                   <div className="img" />
-                  <div className="credits">© Dani Pujalte</div>
+                  <div className="credits">© Jordi Esgleas Marroi</div>
                 </div>
             </div>
             <div className="textContainer">
@@ -139,6 +139,34 @@
                     <br/>
                     Lives and works between Tangier, MA and Barcelona, ES
                   </div>
+
+                  <BioExhibition title="Current Exhibition">
+                    <BioYear year="1 July - 30 July 2021">
+                      <a href="https://www.thethirdline.com/viewing-room/5-anuar-khalifi-palimpsests/" target="_blank" without rel="noopener noreferrer">
+                        <li>Forever Is A Current Event, The Third Line, Dubai, AE</li>
+                      </a>
+                    </BioYear>
+                    <BioYear year="2018">
+                      <li>Dust, Roses & Cockroaches, Galerie Shart, Casablanca, MA</li>
+                    </BioYear>
+                    <BioYear year="2016">
+                      <li>El niño que le dolía el cuello de tanto mirar el cielo, Plom Gallery, Barcelona, ES</li>
+                    </BioYear>
+                    <BioYear year="2015">
+                      <li>Désorienté, BCN The Mothership, Barcelona, ES</li>
+                    </BioYear>
+                    <BioYear year="2014">
+                      <li>Désorienté, Yakin and Boaz Gallery, Casablanca, MA</li>
+                    </BioYear>
+                    <BioYear year="2012">
+                      <li>Tourist Go Home, Galerie Kandisha, Paris, FR</li>
+                    </BioYear>
+                    <BioYear year="2011">
+                      <li>Boys don’t cry, Artingis, Tanger, MA</li>
+                      <li>Fast Food, Les Insolites, Tanger, MA</li>
+                    </BioYear>
+                  </BioExhibition>
+
                   <BioExhibition title="Solo Exhibitions">
                     <BioYear year="2019">
                       <li>Forever Is A Current Event, The Third Line, Dubai, AE</li>
