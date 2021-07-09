@@ -63,6 +63,7 @@
             margin-top: 3vh;
             width: 80vw;
             height: 55vh;
+            margin-bottom: 4vh;
           }
         }
         .credits{
