@@ -51,7 +51,7 @@
         @media (max-width: ${mediaQueries.mobile}) {
           position: static;
           //margin-bottom: 4vh;
-          margin-bottom: 12vh;
+          margin-bottom: 16vh;
         }
 
         .img{
