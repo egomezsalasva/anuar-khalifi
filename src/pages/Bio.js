@@ -148,25 +148,6 @@
                         <li>Palimpsests, The Third Line, Dubai, AE</li>
                       </a>
                     </BioYear>
-                    <BioYear year="2018">
-                      <li>Dust, Roses & Cockroaches, Galerie Shart, Casablanca, MA</li>
-                    </BioYear>
-                    <BioYear year="2016">
-                      <li>El niño que le dolía el cuello de tanto mirar el cielo, Plom Gallery, Barcelona, ES</li>
-                    </BioYear>
-                    <BioYear year="2015">
-                      <li>Désorienté, BCN The Mothership, Barcelona, ES</li>
-                    </BioYear>
-                    <BioYear year="2014">
-                      <li>Désorienté, Yakin and Boaz Gallery, Casablanca, MA</li>
-                    </BioYear>
-                    <BioYear year="2012">
-                      <li>Tourist Go Home, Galerie Kandisha, Paris, FR</li>
-                    </BioYear>
-                    <BioYear year="2011">
-                      <li>Boys don’t cry, Artingis, Tanger, MA</li>
-                      <li>Fast Food, Les Insolites, Tanger, MA</li>
-                    </BioYear>
                   </BioExhibition>
 
                   <BioExhibition title="Solo Exhibitions">
