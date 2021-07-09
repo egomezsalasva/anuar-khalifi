@@ -50,6 +50,7 @@
         flex-direction: column;
         @media (max-width: ${mediaQueries.mobile}) {
           position: static;
+          margin-bottom: 4vh;
         }
 
         .img{
@@ -63,7 +64,6 @@
             margin-top: 3vh;
             width: 80vw;
             height: 55vh;
-            margin-bottom: 4vh;
           }
         }
         .credits{
