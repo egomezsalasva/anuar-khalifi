@@ -145,7 +145,7 @@
                   <BioExhibition title="Current Exhibition">
                     <BioYear year="1 July - 30 July 2021">
                       <a href="https://www.thethirdline.com/viewing-room/5-anuar-khalifi-palimpsests/" target="_blank" without rel="noopener noreferrer">
-                        <li>Forever Is A Current Event, The Third Line, Dubai, AE</li>
+                        <li>Palimpsets, The Third Line, Dubai, AE</li>
                       </a>
                     </BioYear>
                     <BioYear year="2018">
