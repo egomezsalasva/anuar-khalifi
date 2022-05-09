@@ -1,13 +1,18 @@
 // IMPORTS
   //-Modules
   import React from 'react'
+  import { useState, useEffect } from 'react'
   import styled from 'styled-components'
+  import { loadStripe } from '@stripe/stripe-js'
    //-Imgs
    import wayfTshirt from '../imgs/wayf-tshirt.webp'
   //-Components
   import PageWrapper from '../components/PageWrapper'
   import { colors, fonts, mediaQueries } from '../project-styles/projectStyles'
 // 
+
+const stripePromise = loadStripe('pk_test_51KuGUoLGiq1Q4Xad3utNcwMvfq456qzgH0Gsr6QoG6r1Y41SGLSL8643NAexYMfgefUI8gXOWsf1LCUqNwKhu6kq00L5IhVsN3')
+
 
 const ShopContainer = styled.div`
     margin: 100px auto;
@@ -162,6 +167,77 @@ const ShopContainer = styled.div`
 // MAIN COMPONENT
   const Shop = () => {
 
+    const [product, setProduct] = useState({
+      id: 1,
+      name: "WAYF t-shirt",
+      unit: "S",
+      price: 50,
+      stripePrice: 'price_1KxTfHLGiq1Q4XadDEbX5LtD',
+      quantity: 1,
+    })
+    const [ items, setItems ] = useState([])
+
+    useEffect(() => {
+      setItems([{
+        price: product.stripePrice,
+        quantity: product.quantity
+      }])
+
+    }, [product])
+
+    const checkUnit = (e) => {
+      if (e.target.value === "S"){
+        setProduct({...product, id: 1, price: 50, unit: "S", stripePrice:'price_1KxTfHLGiq1Q4XadDEbX5LtD'})
+      }
+      if (e.target.value === "M"){
+        setProduct({...product, id: 2, price: 50, unit: "M",  stripePrice:'price_1KxTfrLGiq1Q4Xadpn7XWyU0'})
+      }
+      if (e.target.value === "L"){
+        setProduct({...product, id: 3, price: 50, unit: "L",  stripePrice:'price_1KxUlLLGiq1Q4XadILDdo1sq'})
+      }
+      if (e.target.value === "XL"){
+        setProduct({...product, id: 4,  price: 50, unit: "XL", stripePrice:'price_1KxUlhLGiq1Q4XadXC3h5NBl'})
+      } 
+    }
+
+
+  let [ maxCounter, setMaxCounter ] = useState(10 - 1)
+  const addProduct = () => {
+      if(maxCounter > 0){
+        setProduct({...product, quantity: product.quantity + 1})
+        setMaxCounter(maxCounter - 1)
+      } 
+  }
+
+  const removeProduct = () => {
+      if(product.quantity > 1){
+        setProduct({...product, quantity: product.quantity - 1})
+        setMaxCounter(maxCounter + 1)
+      }
+  }
+
+  const [stripeLoading, setStripeLoading] = useState(false)
+  const payStripe = async () => {
+
+		setStripeLoading(true)
+
+		const stripe = await stripePromise
+	
+		const { error } = await stripe.redirectToCheckout({
+			lineItems: items,
+			mode: "payment",
+      shippingAddressCollection: {
+				allowedCountries: ['AD', 'AT', 'BE', 'BG', 'HR', 'CZ', 'FI', 'FR', 'DE', 'GI', 'GR', 'HU', 'IS', 'IE', 'IT', 'LV', 'LI', 'LT', 'LU', 'MD', 'MC', 'MA', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SK', 'SI', 'ES', 'SE', 'CH', 'GB' ]
+			},
+			cancelUrl: `${window.location.origin}/shop`,
+			successUrl: `${window.location.origin}/`
+		})
+
+		if (error) {
+			setStripeLoading(false)
+		}
+	}
+
     return (
       <PageWrapper navTitleProp="Shop" >
         <ShopContainer>
@@ -192,7 +268,7 @@ const ShopContainer = styled.div`
 
             <div className="sizeContainer">
               <label className="sizeLabel">Size</label>
-              <select name="size" id="size" className="sizeInput">
+              <select name="size" id="size" className="sizeInput" onChange={ e => checkUnit(e) }>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -202,16 +278,18 @@ const ShopContainer = styled.div`
 
             <div className="quantityContainer">
               <div className="quantityLabel">Quantity</div>
-              <div className="quantitiyAmount">2</div>
-              <div className="quantitiyAdd">+</div>
-              <div className="quantitiyRemove">-</div>
+              <div className="quantitiyAmount">{product.quantity}</div>
+              <div className="quantitiyAdd" onClick={addProduct}>+</div>
+              <div className="quantitiyRemove" onClick={removeProduct}>-</div>
             </div>
 
-            <div className="remaining">2 left</div>
+            { maxCounter === 0 &&
+              <div className="remaining">Maximum purchase of 10 items</div>
+            }
 
-            <div className="priceAmount">50€</div>
+            <div className="priceAmount">{product.price * product.quantity}€</div>
 
-            <div className="shopButton">PURCHASE</div>
+            <div className="shopButton" onClick={payStripe}>{!stripeLoading ? "PURCHASE" : "LOADING..."}</div>
 
           </div>
 
