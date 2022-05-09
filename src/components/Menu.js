@@ -47,7 +47,7 @@
         }
     `
 
-    const titleLineHeight = "100px"
+    const titleLineHeight = "140px"
     const MenuBlockContainer = styled.div`
         width: 340px;
         height: 100vh;
@@ -216,6 +216,10 @@
 
                         <Link to="/bio" onClick={menuClickHandler}>
                             <div className="menuOption">Bio</div>
+                        </Link>
+
+                        <Link to="/shop" onClick={menuClickHandler}>
+                            <div className="menuOption">Shop</div>
                         </Link>
 
                         <Link to="/contact" onClick={menuClickHandler}>

@@ -12,6 +12,7 @@
   import ForeverIsACurrentEvent from './pages/ForeverIsACurrentEvent'
   import DustRosesAndCockroaches from './pages/DustRosesAndCockroaches'
   import Bio from './pages/Bio'
+  import Shop from './pages/Shop'
   import Contact from './pages/Contact'
   import FourOFour from './pages/FourOFour'
   //-Styles
@@ -87,6 +88,8 @@ function App() {
         setNavTitle("١")
       } else if (location.pathname === "/bio") {
         setNavTitle("Bio")
+      } else if (location.pathname === "/shop") {
+        setNavTitle("Shop")
       } else if (location.pathname === "/contact") {
         setNavTitle("Contact")
       } else {
@@ -110,6 +113,9 @@ function App() {
         <Switch>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/shop">
+            <Shop />
           </Route>
           <Route path="/bio">
             <Bio />
