@@ -57,7 +57,7 @@ const ShopContainer = styled.div`
         @media (max-width: ${mediaQueries.mobile}) {
           margin-top: 3vh;
           width: 80vw;
-          height: 55vh;
+          /* height: 55vh; */
         }
       }
     }
