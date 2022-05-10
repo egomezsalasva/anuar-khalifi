@@ -123,13 +123,20 @@ const ShopContainer = styled.div`
           border-right: 1px solid ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
           text-align: center;
           cursor: pointer;
+          @media (max-width: ${mediaQueries.mobile}) {
+            width: 60px;
+          }
         }
+        
 
         .quantitiyRemove{
           padding: 8px;
           width: 48px;
           text-align: center;
           cursor: pointer;
+          @media (max-width: ${mediaQueries.mobile}) {
+            width: 60px;
+          }
         }
 
 
