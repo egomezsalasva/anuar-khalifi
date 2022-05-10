@@ -11,7 +11,7 @@
   import { colors, fonts, mediaQueries } from '../project-styles/projectStyles'
 // 
 
-const stripePromise = loadStripe('pk_test_51KuGUoLGiq1Q4Xad3utNcwMvfq456qzgH0Gsr6QoG6r1Y41SGLSL8643NAexYMfgefUI8gXOWsf1LCUqNwKhu6kq00L5IhVsN3')
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLIC_STRIPE_PK)
 
 
 const ShopContainer = styled.div`
@@ -19,7 +19,6 @@ const ShopContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     color: ${ props => props.theme.mode === 'dark' ? colors.white :  colors.blue };
     @media (max-width: ${mediaQueries.tablet}) {
       width: 100%;
@@ -32,7 +31,8 @@ const ShopContainer = styled.div`
       margin-bottom: 40px;
       text-transform: capitalize;
       @media (max-width: ${mediaQueries.mobile}) {
-        font-size: 19px;
+        margin-top: 20px;
+        font-size: 20px;
       }
     }
 
@@ -46,6 +46,7 @@ const ShopContainer = styled.div`
       }
 
       @media (max-width: ${mediaQueries.mobile}) {
+        width: 80vw;
         font-size: 14px;
       }
     }
@@ -64,11 +65,18 @@ const ShopContainer = styled.div`
     .productDetails{
       width: 380px;
       margin-top: 20px;
+      @media (max-width: ${mediaQueries.mobile}) {
+        width: 80vw;
+        font-size: 14px;
+      }
     }
 
     .buyContainer{
       margin-top: 40px;
       width: 380px;
+      @media (max-width: ${mediaQueries.mobile}) {
+        width: 80vw;
+      }
 
       .sizeContainer{
         width: 100%;
@@ -172,7 +180,7 @@ const ShopContainer = styled.div`
       name: "WAYF t-shirt",
       unit: "S",
       price: 50,
-      stripePrice: 'price_1KxTfHLGiq1Q4XadDEbX5LtD',
+      stripePrice: 'price_1KxoftLGiq1Q4XadrBfFFEYC',
       quantity: 1,
     })
     const [ items, setItems ] = useState([])
@@ -187,16 +195,16 @@ const ShopContainer = styled.div`
 
     const checkUnit = (e) => {
       if (e.target.value === "S"){
-        setProduct({...product, id: 1, price: 50, unit: "S", stripePrice:'price_1KxTfHLGiq1Q4XadDEbX5LtD'})
+        setProduct({...product, id: 1, price: 50, unit: "S", stripePrice:'price_1KxoftLGiq1Q4XadrBfFFEYC'})
       }
       if (e.target.value === "M"){
-        setProduct({...product, id: 2, price: 50, unit: "M",  stripePrice:'price_1KxTfrLGiq1Q4Xadpn7XWyU0'})
+        setProduct({...product, id: 2, price: 50, unit: "M",  stripePrice:'price_1KxofpLGiq1Q4XadF4lMUTCt'})
       }
       if (e.target.value === "L"){
-        setProduct({...product, id: 3, price: 50, unit: "L",  stripePrice:'price_1KxUlLLGiq1Q4XadILDdo1sq'})
+        setProduct({...product, id: 3, price: 50, unit: "L",  stripePrice:'price_1KxofgLGiq1Q4Xad86Qi7ZCI'})
       }
       if (e.target.value === "XL"){
-        setProduct({...product, id: 4,  price: 50, unit: "XL", stripePrice:'price_1KxUlhLGiq1Q4XadXC3h5NBl'})
+        setProduct({...product, id: 4,  price: 50, unit: "XL", stripePrice:'price_1KxofaLGiq1Q4XadLco1ZF8G'})
       } 
     }
 
