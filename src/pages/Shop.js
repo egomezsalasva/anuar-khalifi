@@ -285,7 +285,9 @@ const ShopContainer = styled.div`
               <label className="sizeLabel">Size</label>
               <select name="size" id="size" className="sizeInput" onChange={ e => checkUnit(e) }>
                 <option value="S">S</option>
+                <option value="M">M</option>
                 <option value="L">L</option>
+                <option value="XL">XL</option>
               </select>
             </div>
 
