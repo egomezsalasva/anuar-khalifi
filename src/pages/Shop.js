@@ -1,9 +1,9 @@
 // IMPORTS
   //-Modules
   import React from 'react'
-  import { useState, useEffect } from 'react'
+  // import { useState, useEffect } from 'react'
   import styled from 'styled-components'
-  import { loadStripe } from '@stripe/stripe-js'
+  // import { loadStripe } from '@stripe/stripe-js'
    //-Imgs
    import wayfTshirt from '../imgs/wayf-tshirt.webp'
   //-Components
@@ -11,7 +11,7 @@
   import { colors, fonts, mediaQueries } from '../project-styles/projectStyles'
 // 
 
-const stripePromise = loadStripe(process.env.REACT_APP_PUBLIC_STRIPE_PK)
+// const stripePromise = loadStripe(process.env.REACT_APP_PUBLIC_STRIPE_PK)
 
 
 const ShopContainer = styled.div`
@@ -127,7 +127,6 @@ const ShopContainer = styled.div`
             width: 60px;
           }
         }
-        
 
         .quantitiyRemove{
           padding: 8px;
@@ -138,9 +137,6 @@ const ShopContainer = styled.div`
             width: 60px;
           }
         }
-
-
-        
       }
 
       .remaining{
@@ -173,6 +169,10 @@ const ShopContainer = styled.div`
         cursor: pointer;
       }
 
+      .shopButton_disable{
+        opacity: 0.5;
+      }
+
     }
  
 `
@@ -182,76 +182,76 @@ const ShopContainer = styled.div`
 // MAIN COMPONENT
   const Shop = () => {
 
-    const [product, setProduct] = useState({
-      id: 1,
-      name: "WAYF t-shirt",
-      unit: "S",
-      price: 50,
-      stripePrice: 'price_1KxoftLGiq1Q4XadrBfFFEYC',
-      quantity: 1,
-    })
-    const [ items, setItems ] = useState([])
+    // const [product, setProduct] = useState({
+    //   id: 1,
+    //   name: "WAYF t-shirt",
+    //   unit: "S",
+    //   price: 50,
+    //   stripePrice: 'price_1KxoftLGiq1Q4XadrBfFFEYC',
+    //   quantity: 1,
+    // })
+    // const [ items, setItems ] = useState([])
 
-    useEffect(() => {
-      setItems([{
-        price: product.stripePrice,
-        quantity: product.quantity
-      }])
+    // useEffect(() => {
+    //   setItems([{
+    //     price: product.stripePrice,
+    //     quantity: product.quantity
+    //   }])
 
-    }, [product])
+    // }, [product])
 
-    const checkUnit = (e) => {
-      if (e.target.value === "S"){
-        setProduct({...product, id: 1, price: 50, unit: "S", stripePrice:'price_1KxoftLGiq1Q4XadrBfFFEYC'})
-      }
-      if (e.target.value === "M"){
-        setProduct({...product, id: 2, price: 50, unit: "M",  stripePrice:'price_1KxofpLGiq1Q4XadF4lMUTCt'})
-      }
-      if (e.target.value === "L"){
-        setProduct({...product, id: 3, price: 50, unit: "L",  stripePrice:'price_1KxofgLGiq1Q4Xad86Qi7ZCI'})
-      }
-      if (e.target.value === "XL"){
-        setProduct({...product, id: 4,  price: 50, unit: "XL", stripePrice:'price_1KxofaLGiq1Q4XadLco1ZF8G'})
-      } 
-    }
+    // const checkUnit = (e) => {
+    //   if (e.target.value === "S"){
+    //     setProduct({...product, id: 1, price: 50, unit: "S", stripePrice:'price_1KxoftLGiq1Q4XadrBfFFEYC'})
+    //   }
+    //   if (e.target.value === "M"){
+    //     setProduct({...product, id: 2, price: 50, unit: "M",  stripePrice:'price_1KxofpLGiq1Q4XadF4lMUTCt'})
+    //   }
+    //   if (e.target.value === "L"){
+    //     setProduct({...product, id: 3, price: 50, unit: "L",  stripePrice:'price_1KxofgLGiq1Q4Xad86Qi7ZCI'})
+    //   }
+    //   if (e.target.value === "XL"){
+    //     setProduct({...product, id: 4,  price: 50, unit: "XL", stripePrice:'price_1KxofaLGiq1Q4XadLco1ZF8G'})
+    //   } 
+    // }
 
 
-  let [ maxCounter, setMaxCounter ] = useState(10 - 1)
-  const addProduct = () => {
-      if(maxCounter > 0){
-        setProduct({...product, quantity: product.quantity + 1})
-        setMaxCounter(maxCounter - 1)
-      } 
-  }
+  // let [ maxCounter, setMaxCounter ] = useState(10 - 1)
+  // const addProduct = () => {
+  //     if(maxCounter > 0){
+  //       setProduct({...product, quantity: product.quantity + 1})
+  //       setMaxCounter(maxCounter - 1)
+  //     } 
+  // }
 
-  const removeProduct = () => {
-      if(product.quantity > 1){
-        setProduct({...product, quantity: product.quantity - 1})
-        setMaxCounter(maxCounter + 1)
-      }
-  }
+  // const removeProduct = () => {
+  //     if(product.quantity > 1){
+  //       setProduct({...product, quantity: product.quantity - 1})
+  //       setMaxCounter(maxCounter + 1)
+  //     }
+  // }
 
-  const [stripeLoading, setStripeLoading] = useState(false)
-  const payStripe = async () => {
+  // const [stripeLoading, setStripeLoading] = useState(false)
+  // const payStripe = async () => {
 
-		setStripeLoading(true)
+	// 	setStripeLoading(true)
 
-		const stripe = await stripePromise
+	// 	const stripe = await stripePromise
 	
-		const { error } = await stripe.redirectToCheckout({
-			lineItems: items,
-			mode: "payment",
-      shippingAddressCollection: {
-				allowedCountries: ['AD', 'AT', 'BE', 'BG', 'HR', 'CZ', 'FI', 'FR', 'DE', 'GI', 'GR', 'HU', 'IS', 'IE', 'IT', 'LV', 'LI', 'LT', 'LU', 'MD', 'MC', 'MA', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SK', 'SI', 'ES', 'SE', 'CH', 'GB' ]
-			},
-			cancelUrl: `${window.location.origin}/shop`,
-			successUrl: `${window.location.origin}/`
-		})
+	// 	const { error } = await stripe.redirectToCheckout({
+	// 		lineItems: items,
+	// 		mode: "payment",
+  //     shippingAddressCollection: {
+	// 			allowedCountries: ['AD', 'AT', 'BE', 'BG', 'HR', 'CZ', 'FI', 'FR', 'DE', 'GI', 'GR', 'HU', 'IS', 'IE', 'IT', 'LV', 'LI', 'LT', 'LU', 'MD', 'MC', 'MA', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SK', 'SI', 'ES', 'SE', 'CH', 'GB' ]
+	// 		},
+	// 		cancelUrl: `${window.location.origin}/shop`,
+	// 		successUrl: `${window.location.origin}/`
+	// 	})
 
-		if (error) {
-			setStripeLoading(false)
-		}
-	}
+	// 	if (error) {
+	// 		setStripeLoading(false)
+	// 	}
+	// }
 
     return (
       <PageWrapper navTitleProp="Shop" >
@@ -281,7 +281,7 @@ const ShopContainer = styled.div`
 
           <div className="buyContainer">
 
-            <div className="sizeContainer">
+            {/* <div className="sizeContainer">
               <label className="sizeLabel">Size</label>
               <select name="size" id="size" className="sizeInput" onChange={ e => checkUnit(e) }>
                 <option value="S">S</option>
@@ -302,9 +302,10 @@ const ShopContainer = styled.div`
               <div className="remaining">Maximum purchase of 10 items</div>
             }
 
-            <div className="priceAmount">{product.price * product.quantity}€</div>
+            <div className="priceAmount">{product.price * product.quantity}€</div> */}
 
-            <div className="shopButton" onClick={payStripe}>{!stripeLoading ? "PURCHASE" : "LOADING..."}</div>
+            {/* <div className="shopButton" onClick={payStripe}>{!stripeLoading ? "PURCHASE" : "LOADING..."}</div> */}
+            <div className="shopButton shopButton_disable">Sold Out</div>
 
           </div>
 

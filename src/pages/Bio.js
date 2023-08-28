@@ -142,17 +142,24 @@
                     Lives and works between Tangier, MA and Barcelona, ES
                   </div>
 
+
                   <BioExhibition title="Current Exhibition">
-                    <BioYear year="1 July - 30 July 2021">
-                      <a href="https://www.thethirdline.com/viewing-room/5-anuar-khalifi-palimpsests/" target="_blank" without rel="noopener noreferrer">
-                        <li>Palimpsests, The Third Line, Dubai, AE</li>
+                    <BioYear year="15th July – 24th September 2023">
+                      <a href="https://www.intheheartofanothercountry.com/en#:~:text=In%20the%20Heart%20of%20Another%20Country%20explores%20human%20experience%20through,to%20the%20Gulf%20of%20Oman" target="_blank" without rel="noopener noreferrer">
+                        <li> In The Heart Of Another Country, Sharjah Art Foundation, Sharjah, UAE</li>
                       </a>
                     </BioYear>
                   </BioExhibition>
 
                   <BioExhibition title="Solo Exhibitions">
+                    <BioYear year="2023">
+                      <li>Mirror Ball, The Third Line, Dubai, UAE</li>
+                    </BioYear>
+                    <BioYear year="2021">
+                      <li>Palimpsests, The Third Line, Dubai, UAE</li>
+                    </BioYear>
                     <BioYear year="2019">
-                      <li>Forever Is A Current Event, The Third Line, Dubai, AE</li>
+                      <li>Forever Is A Current Event, The Third Line, Dubai, UAE</li>
                     </BioYear>
                     <BioYear year="2018">
                       <li>Dust, Roses & Cockroaches, Galerie Shart, Casablanca, MA</li>
@@ -176,7 +183,13 @@
                   </BioExhibition>
 
                   <BioExhibition title="Group Exhibitions">
+                    <BioYear year="2022">
+                      <li>In The Heart Of Another Country, Deichtorhallen Hamburg, Hamburg, DE</li>
+                      <li>Perpetual Inventory - Volume 1: An Exercise in Looking, The Third Line, Dubai, UAE</li>
+                      <li>A serious game, Museum of African Contemporary Art Al Maaden, Marrakesh, MA</li>
+                    </BioYear>
                     <BioYear year="2021">
+                      <li>The Third Line at Cromwell Place, Gallery 5, Cromwell Place, London, UK</li>
                       <li>Ce qui s'oublie et ce qui reste, Musée national de l’histoire de l’immigration, Paris, FR</li>
                     </BioYear>
                     <BioYear year="2020">
@@ -198,6 +211,9 @@
                   </BioExhibition>
 
                   <BioExhibition title="ART FAIRS AND BIENNALES">
+                    <BioYear year="2022">
+                      <li>1-54 Contemporary African Art Fair, Paris, FR</li>
+                    </BioYear>
                     <BioYear year="2020">
                       <li>Frieze London, The Third Line, London, UK</li>
                     </BioYear>
@@ -211,8 +227,14 @@
                     </BioYear>
                   </BioExhibition>
                   <BioExhibition title="COLLECTIONS">
-                    <BioYear year="">
+                   <BioYear year="">
                       <li>MACAAL, Musée d'Art contemporain africain Al-Maaden, Marrakech, MA</li>
+                    </BioYear>
+                    <BioYear year="">
+                      <li>Sharjah Art Foundation, Sharjah, UAE</li>
+                    </BioYear>
+                    <BioYear year="">
+                      <li>Fondation H, Atananarivo, MDG</li>
                     </BioYear>
                   </BioExhibition>
                 </div>
